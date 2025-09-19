@@ -3,29 +3,29 @@ import React, { useEffect, useState } from "react";
 // --- Simple theme hook (light/dark) ----------------------------------------
 function useTheme() {
   const [theme, setTheme] = React.useState("light");
-  
+
   React.useEffect(() => {
-  const saved = localStorage.getItem("theme");
-  if (saved === "light" || saved === "dark") {
-  setTheme(saved);
-  document.documentElement.dataset.theme = saved;
-  return;
-  }
-  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const initial = prefersDark ? "dark" : "light";
-  setTheme(initial);
-  document.documentElement.dataset.theme = initial;
+    const saved = localStorage.getItem("theme");
+    if (saved === "light" || saved === "dark") {
+      setTheme(saved);
+      document.documentElement.dataset.theme = saved;
+      return;
+    }
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initial = prefersDark ? "dark" : "light";
+    setTheme(initial);
+    document.documentElement.dataset.theme = initial;
   }, []);
-  
+
   const toggle = () => {
-  const next = theme === "dark" ? "light" : "dark";
-  setTheme(next);
-  document.documentElement.dataset.theme = next;
-  localStorage.setItem("theme", next);
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("theme", next);
   };
-  
+
   return { theme, toggle };
-  }
+}
 
 // --- UI: Theme Toggle -------------------------------------------------------
 function ThemeToggle({ className = "" }) {
@@ -70,7 +70,7 @@ function HeroHome() {
       </p>
       <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
         <a href="#about" className="btn btn-primary">About me</a>
-        <a href="#fitapp" className="btn btn-accent2">FitApp Demo</a>
+        <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
         <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
         <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
         <a href="#contact" className="btn btn-accent">Contact</a>
@@ -97,22 +97,37 @@ export default function App() {
       <main className="container">
         <HeroHome />
         <Section id="about" title="About me">
-          <p><strong>Hello! nice to see you</strong>, my name is Erika. I studied fashion design, which gave me strong skills in creativity, project management, and attention to detail. Recently, I decided to transition into the tech world, and now I’m a Java full-stack developer. Some of my skills (HTML, CSS,  Bootstrap, Java Script, Java, Spring Boot, React, Tailwind, Adobe Suite, SQL, Git/GitHub), if you want to know more about my professional environment here is my LinkedIn profile.</p>
+          <p><strong>Hello! nice to see you</strong> <br /> My name is Erika. I studied fashion design, which gave me strong skills in creativity, project management, and attention to detail. Recently, I decided to transition into the tech world, and now I’m a Java full-stack developer. <br />
+          <p className="text-gray-800 dark:text-gray-200 font-semibold mb-2">
+            Some of my skills: </p>
+            HTML, CSS,  Bootstrap, Java Script, Java, Spring Boot, React, Tailwind, Adobe Suite, SQL, Git/GitHub.. <br />
+            If you want to know more about my professional environment here is my LinkedIn profile.</p>
           <a className="btn" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">LinkedIn</a>
-        </Section>
-        <Section id="fitapp" title="FitApp Demo">
-          <p>Soon: calculate your macros and track the food you eat.</p>
         </Section>
         <Section id="aprendeShop" title="AprendeShop">
           <div className="stack">
-            <p><strong>Full‑stack e‑commerce (team project)</strong>. AprendeShop is a full-stack web application developed as part of Generation’s Java Full-Stack Bootcamp. It is designed as an e-commerce and learning platform where users can purchase creative courses, materials, and interact in a community forum.
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              Full-stack e-commerce (team project)
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              AprendeShop is a full-stack web application developed as part of Generation’s Java Full-Stack Bootcamp.
+              It is designed as an e-commerce and learning platform where users can purchase creative courses, materials,
+              and interact in a community forum.
+            </p>
+            <p className="text-gray-800 dark:text-gray-200 font-semibold mb-2">
               As part of the team, I collaborated on:
-              Developing responsive UI components with HTML, CSS, JavaScript, and Bootstrap
-              Implementing features such as wishlist, dark/light mode, and forum
-              Building back-end functionality with Java and Spring Boot
-              Managing databases with MySQL
-              Deploying the application on AWS
-              Although AprendeShop is a capstone project and not a commercial product, it showcases my ability to work in agile teams, apply industry tools, and develop scalable solutions from scratch.</p>
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 mb-4">
+              <li>Developing responsive UI components with HTML, CSS, JavaScript, and Bootstrap</li>
+              <li>Building back-end functionality with Java and Spring Boot</li>
+              <li>Managing databases with MySQL</li>
+              <li>Deploying the application on AWS</li>
+            </ul>
+            <p className="text-gray-700 dark:text-gray-300">
+              Although AprendeShop is not only a commercial product, it showcases my ability to
+              work in agile teams, apply industry tools, and develop scalable solutions from scratch.
+            </p>
+
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn" href="https://rubiportuguez.github.io/Aprende-Shop/index.html" target="_blank" rel="noreferrer">View demo</a>
               <a className="btn" href="https://github.com/RubiPortuguez/Aprende-Shop/tree/develop" target="_blank" rel="noreferrer">Front End Repository</a>
@@ -120,6 +135,9 @@ export default function App() {
               <a className="btn" href="https://www.figma.com/design/MG8TBK9lzvWV1aU8pJSIPd/Borradores-AprendeShop?node-id=0-1&t=K5eREUPBSSRUzPKl-1" target="_blank" rel="noreferrer">Figma</a>
             </div>
           </div>
+        </Section>
+        <Section id="fitapp" title="FitApp Demo">
+          <p>Soon: calculate your macros and track the food you eat.</p>
         </Section>
         <Section id="adobe" title="AdobeSuite">
           <div className="stack">
@@ -131,7 +149,7 @@ export default function App() {
         </Section>
         <Section id="contact" title="Contact">
           <div className="stack">
-            <p>Let's work together!!</p>
+            <p> <strong>Let's work together!!</strong></p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn" href="mailto:eahidehernandez@gmail.com" rel="noreferrer">Email</a>
               <a className="btn" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">LinkedIn</a>
