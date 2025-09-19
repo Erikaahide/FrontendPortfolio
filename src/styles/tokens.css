@@ -1,0 +1,53 @@
+/* Design tokens: colores, tipografías, radios, sombras, espaciado */
+:root {
+    /* Colores semánticos modo claro */
+    --bg: #f8f9fb;
+    --surface: #ffffff;
+    --text: #151718;
+    --muted: #70757e;
+  
+    /* Primary / accent (ajusta a tu paleta) */
+    --primary: #ff2ea6; /* rosa prota */
+    --accent:  #7c4dff; /* acento violeta sutil */
+  
+    /* Borde / focus ring */
+    --border: #e6e8eb;
+    --ring:   #b8c1ff;
+  
+    /* Tipografía */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    --font-size-sm: 0.9rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: clamp(2rem, 6vw, 4rem);
+  
+    /* Radius y sombras */
+    --radius: 1rem;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md: 0 6px 24px rgba(0,0,0,.08);
+  
+    /* Espaciado (8px scale) */
+    --space-1: .25rem;
+    --space-2: .5rem;
+    --space-3: .75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+  }
+  
+  /* Modo oscuro: mismo H/S, ajusta luminancia */
+  :root[data-theme="dark"] {
+    --bg: #0f1113;
+    --surface: #171a1d;
+    --text: #eef1f3;
+    --muted: #a1a7af;
+    --primary: #ff2ea6; /* conserva tono */
+    --accent:  #7c4dff;
+  
+    --border: #24282c;
+    --ring:   #4553ff;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.35);
+    --shadow-md: 0 10px 28px rgba(0,0,0,.45);
+  }
+  
