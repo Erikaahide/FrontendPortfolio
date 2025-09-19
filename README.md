@@ -11,6 +11,9 @@ I’m currently building this portfolio —  Work in Progress..
  **React + Vite**.  
 This project showcases my work, skills, and experience as a Full-Stack Developer.  
 
+**GitHubPages View**
+(https://erikaahide.github.io/FrontendPortfolio/)
+
 ## Tech Stack
 - React  
 - Vite

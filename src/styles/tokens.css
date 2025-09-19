@@ -6,13 +6,16 @@
     --text: #151718;
     --muted: #70757e;
   
-    /* Primary / accent (ajusta a tu paleta) */
-    --primary: #ff2ea6; /* rosa prota */
-    --accent:  #7c4dff; /* acento violeta sutil */
+    /* Primary / accent */
+    --primary: #f8246e; 
+    --accent:  #a694d7;
+    --accent2: rgb(141, 205, 58);
+    --accent3: #008876;
+    --accent4: rgb(242, 229, 86);
   
     /* Borde / focus ring */
     --border: #e6e8eb;
-    --ring:   #b8c1ff;
+    --ring:   #9680ce;
   
     /* Tipografía */
     --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
@@ -42,8 +45,8 @@
     --surface: #171a1d;
     --text: #eef1f3;
     --muted: #a1a7af;
-    --primary: #ff2ea6; /* conserva tono */
-    --accent:  #7c4dff;
+    --primary: #ff2ea6;
+    --accent:  #b24dff;
   
     --border: #24282c;
     --ring:   #4553ff;
