@@ -97,33 +97,48 @@ export default function App() {
       <main className="container">
         <HeroHome />
         <Section id="about" title="About me">
-          <p><strong>Hello! nice to see you</strong> <br /> My name is Erika. I studied fashion design, which gave me strong skills in creativity, project management, and attention to detail. Recently, I decided to transition into the tech world, and now I’m a Java full-stack developer. <br />
-          <p className="text-gray-800 dark:text-gray-200 font-semibold mb-2">
-            Some of my skills: </p>
-            HTML, CSS,  Bootstrap, Java Script, Java, Spring Boot, React, Tailwind, Adobe Suite, SQL, Git/GitHub.. <br />
-            If you want to know more about my professional environment here is my LinkedIn profile.</p>
-          <a className="btn" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">LinkedIn</a>
+        <div className="stack">
+            <h2 className="text-2xl font-bold mb-2">
+              Hello! Nice to see you</h2>
+            <p className="mb-4">
+              My name is Erika. I studied fashion design,
+              which gave me strong skills in creativity, project management, and attention to detail.
+              Recently, I decided to transition into the tech world, and now I’m a
+              <span className="font-semibold"> Java Full-Stack Developer</span>.
+            </p>
+
+            <h3 className="text-lg font-semibold mb-2">
+              Some of my skills:
+            </h3>
+            <p className="mb-4">
+              HTML, CSS, Bootstrap, JavaScript, Java, Spring Boot, React, Tailwind, Adobe Suite, SQL, Git/GitHub...
+            </p>
+
+            <p>If you want to know more about my professional environment here is my LinkedIn profile.</p>
+            <a
+              className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow-md transition duration-300" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </Section>
         <Section id="aprendeShop" title="AprendeShop">
           <div className="stack">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            <h3 className="text-xl font-bold mb-2">
               Full-stack e-commerce (team project)
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <p className=" mb-4">
               AprendeShop is a full-stack web application developed as part of Generation’s Java Full-Stack Bootcamp.
               It is designed as an e-commerce and learning platform where users can purchase creative courses, materials,
               and interact in a community forum.
             </p>
-            <p className="text-gray-800 dark:text-gray-200 font-semibold mb-2">
+            <p className="font-semibold mb-2">
               As part of the team, I collaborated on:
             </p>
-            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 mb-4">
+            <ul className="list-disc list-inside space-y-1 mb-4">
               <li>Developing responsive UI components with HTML, CSS, JavaScript, and Bootstrap</li>
               <li>Building back-end functionality with Java and Spring Boot</li>
               <li>Managing databases with MySQL</li>
               <li>Deploying the application on AWS</li>
             </ul>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p>
               Although AprendeShop is not only a commercial product, it showcases my ability to
               work in agile teams, apply industry tools, and develop scalable solutions from scratch.
             </p>
@@ -136,7 +151,7 @@ export default function App() {
             </div>
           </div>
         </Section>
-        <Section id="fitapp" title="FitApp Demo">
+        <Section id="fitapp" title="FitAppDemo">
           <p>Soon: calculate your macros and track the food you eat.</p>
         </Section>
         <Section id="adobe" title="AdobeSuite">
