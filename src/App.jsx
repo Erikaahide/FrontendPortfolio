@@ -137,7 +137,9 @@ export default function App() {
             <ul className="list-disc list-inside space-y-1 mb-4">
               <li>Developing responsive UI components with HTML, CSS, JavaScript, and Bootstrap</li>
               <li>Building back-end functionality with Java and Spring Boot</li>
-              <li>Managing databases with MySQL</li>
+              <li>Implemented RESTful APIs with Spring Boot JPA/Hibernate.</li>
+              <li>Secured authentication and authorization using Spring Security, JWT and password encryption with BCrypt.</li>
+              <li>Designed and maintained relational schema with MySQL/MariaDB</li>
               <li>Deploying the application on AWS</li>
             </ul>
             <p>
