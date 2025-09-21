@@ -83,6 +83,11 @@ padding: 0 var(--space-4); }
 .btn-ghost {
   background: transparent;
 }
+
+.btn-circle{
+border-radius:80px;
+}
+
 .btn-accent {
   background: var(--accent);
   border-color: transparent;

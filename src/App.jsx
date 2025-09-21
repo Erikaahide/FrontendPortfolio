@@ -31,7 +31,7 @@ function useTheme() {
 function ThemeToggle({ className = "" }) {
   const { theme, toggle } = useTheme();
   return (
-    <button className={`btn ${className}`} onClick={toggle} aria-label="Toggle theme">
+    <button className={`btn btn-circle ${className}`} onClick={toggle} aria-label="Toggle theme">
       <span aria-hidden>{theme === "dark" ? "☀️" : "🌙"}</span>
       <span className="sr-only">Change theme</span>
     </button>
@@ -43,7 +43,9 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-inner container">
-        <a href="#home" className="btn btn-ghost" style={{ paddingInline: ".5rem" }}>
+        <a href="#home" className="bg-pink-500 hover:bg-pink-600 text-white font-medium 
+               w-12 h-12 rounded-full shadow-md transition duration-300 
+               flex items-center justify-center" style={{ paddingInline: ".5rem" }}>
           <strong>EA</strong>
         </a>
         {/* <nav style={{ display: "flex", gap: "0.5rem" }}>
@@ -79,7 +81,7 @@ function HeroHome() {
   );
 }
 
-// --- Placeholder sections to scroll (you can replace later with pages/routes) --
+// --- Placeholder sections to scroll (replace later with pages/routes) --
 function Section({ id, title, children }) {
   return (
     <section id={id} className="container stack" style={{ padding: "3rem 0" }}>
@@ -97,7 +99,7 @@ export default function App() {
       <main className="container">
         <HeroHome />
         <Section id="about" title="About me">
-        <div className="stack">
+          <div className="stack">
             <h2 className="text-2xl font-bold mb-2">
               Hello! Nice to see you</h2>
             <p className="mb-4">
@@ -144,10 +146,10 @@ export default function App() {
             </p>
 
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn" href="https://rubiportuguez.github.io/Aprende-Shop/index.html" target="_blank" rel="noreferrer">View demo</a>
-              <a className="btn" href="https://github.com/RubiPortuguez/Aprende-Shop/tree/develop" target="_blank" rel="noreferrer">Front End Repository</a>
-              <a className="btn" href="https://github.com/RubiPortuguez/AprendeShop-Backend/tree/develop" target="_blank" rel="noreferrer">Back End Repository</a>
-              <a className="btn" href="https://www.figma.com/design/MG8TBK9lzvWV1aU8pJSIPd/Borradores-AprendeShop?node-id=0-1&t=K5eREUPBSSRUzPKl-1" target="_blank" rel="noreferrer">Figma</a>
+              <a className="btn btn-accent3" href="https://rubiportuguez.github.io/Aprende-Shop/index.html" target="_blank" rel="noreferrer">👁️View demo</a>
+              <a className="btn btn-accent3" href="https://github.com/RubiPortuguez/Aprende-Shop/tree/develop" target="_blank" rel="noreferrer">🎨Front End Repository</a>
+              <a className="btn btn-accent3" href="https://github.com/RubiPortuguez/AprendeShop-Backend/tree/develop" target="_blank" rel="noreferrer">🧩Back End Repository</a>
+              <a className="btn btn-accent3" href="https://www.figma.com/design/MG8TBK9lzvWV1aU8pJSIPd/Borradores-AprendeShop?node-id=0-1&t=K5eREUPBSSRUzPKl-1" target="_blank" rel="noreferrer">🖥️Figma</a>
             </div>
           </div>
         </Section>
@@ -158,7 +160,7 @@ export default function App() {
           <div className="stack">
             <p><strong>Illustrator & Photoshop Book</strong></p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn" href="https://drive.google.com/file/d/1LXkoXs2C3OjuENXDobDhNGNGjYEuHxeY/view?usp=sharing" target="_blank" rel="noreferrer"> Book (PDF)</a>
+              <a className="btn btn-accent4" href="https://drive.google.com/file/d/1LXkoXs2C3OjuENXDobDhNGNGjYEuHxeY/view?usp=sharing" target="_blank" rel="noreferrer">📒Book (PDF)</a>
             </div>
           </div>
         </Section>
@@ -166,9 +168,9 @@ export default function App() {
           <div className="stack">
             <p> <strong>Let's work together!!</strong></p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn" href="mailto:eahidehernandez@gmail.com" rel="noreferrer">Email</a>
-              <a className="btn" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a className="btn" href="https://github.com/Erikaahide" target="_blank" rel="noreferrer">GitHub</a>
+              <a className="btn btn-accent" href="mailto:eahidehernandez@gmail.com" rel="noreferrer">📧Email</a>
+              <a className="btn btn-accent" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">💼LinkedIn</a>
+              <a className="btn btn-accent" href="https://github.com/Erikaahide" target="_blank" rel="noreferrer">🐱GitHub</a>
             </div>
           </div>
         </Section>
