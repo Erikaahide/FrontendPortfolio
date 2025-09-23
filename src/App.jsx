@@ -72,9 +72,10 @@ function HeroHome() {
       </p>
       <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
         <a href="#about" className="btn btn-primary">About me</a>
-        <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
         <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
         <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
+        <a href="#adobe" className="btn btn-accent5">JS Demo</a>
+        <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
         <a href="#contact" className="btn btn-accent">Contact</a>
       </div>
     </section>
@@ -148,10 +149,23 @@ export default function App() {
             </p>
 
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn btn-accent3" href="https://rubiportuguez.github.io/Aprende-Shop/index.html" target="_blank" rel="noreferrer">👁️View demo</a>
-              <a className="btn btn-accent3" href="https://github.com/RubiPortuguez/Aprende-Shop/tree/develop" target="_blank" rel="noreferrer">🎨Front End Repository</a>
-              <a className="btn btn-accent3" href="https://github.com/RubiPortuguez/AprendeShop-Backend/tree/develop" target="_blank" rel="noreferrer">🧩Back End Repository</a>
-              <a className="btn btn-accent3" href="https://www.figma.com/design/MG8TBK9lzvWV1aU8pJSIPd/Borradores-AprendeShop?node-id=0-1&t=K5eREUPBSSRUzPKl-1" target="_blank" rel="noreferrer">🖥️Figma</a>
+              <a className="btn btn-accent3" href="https://rubiportuguez.github.io/Aprende-Shop/index.html" target="_blank" rel="noreferrer">👁️ View demo</a>
+              <a className="btn btn-accent3" href="https://github.com/RubiPortuguez/Aprende-Shop/tree/develop" target="_blank" rel="noreferrer">🎨 Front End Repository</a>
+              <a className="btn btn-accent3" href="https://github.com/RubiPortuguez/AprendeShop-Backend/tree/develop" target="_blank" rel="noreferrer">🧩 Back End Repository</a>
+              <a className="btn btn-accent3" href="https://www.figma.com/design/MG8TBK9lzvWV1aU8pJSIPd/Borradores-AprendeShop?node-id=0-1&t=K5eREUPBSSRUzPKl-1" target="_blank" rel="noreferrer">🖥️ Figma</a>
+            </div>
+          </div>
+        </Section>
+        <Section id="JS" title="JSDemo">
+          <div className="stack">
+            <p> <strong>Mini Search App (JSdemo)</strong></p>
+            <p className=" mb-4">
+            A simple JavaScript demo project: a user search app. <br />
+            Built with <strong>Vanilla JS, HTML5, and CSS3,</strong> Fetch user data asynchronously from a REST API .
+            </p>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+              <a className="btn btn-accent" href="https://github.com/Erikaahide" target="_blank" rel="noreferrer">👁️ View</a>
+              <a className="btn btn-accent" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">Repo GitHub</a>
             </div>
           </div>
         </Section>
@@ -162,7 +176,7 @@ export default function App() {
           <div className="stack">
             <p><strong>Illustrator & Photoshop Book</strong></p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn btn-accent4" href="https://drive.google.com/file/d/1LXkoXs2C3OjuENXDobDhNGNGjYEuHxeY/view?usp=sharing" target="_blank" rel="noreferrer">📒Book (PDF)</a>
+              <a className="btn btn-accent4" href="https://drive.google.com/file/d/1LXkoXs2C3OjuENXDobDhNGNGjYEuHxeY/view?usp=sharing" target="_blank" rel="noreferrer">📔 Book (PDF)</a>
             </div>
           </div>
         </Section>
@@ -170,9 +184,9 @@ export default function App() {
           <div className="stack">
             <p> <strong>Let's work together!!</strong></p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn btn-accent" href="mailto:eahidehernandez@gmail.com" rel="noreferrer">📧Email</a>
-              <a className="btn btn-accent" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">💼LinkedIn</a>
-              <a className="btn btn-accent" href="https://github.com/Erikaahide" target="_blank" rel="noreferrer">🐱GitHub</a>
+              <a className="btn btn-accent" href="mailto:eahidehernandez@gmail.com" rel="noreferrer">📧 Email</a>
+              <a className="btn btn-accent" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">💼 LinkedIn</a>
+              <a className="btn btn-accent" href="https://github.com/Erikaahide" target="_blank" rel="noreferrer">🐱 GitHub</a>
             </div>
           </div>
         </Section>
