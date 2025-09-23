@@ -74,7 +74,7 @@ function HeroHome() {
         <a href="#about" className="btn btn-primary">About me</a>
         <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
         <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
-        <a href="#adobe" className="btn btn-accent5">JS Demo</a>
+        <a href="#JS" className="btn btn-accent5">JS Demo</a>
         <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
         <a href="#contact" className="btn btn-accent">Contact</a>
       </div>
@@ -156,16 +156,18 @@ export default function App() {
             </div>
           </div>
         </Section>
+
         <Section id="JS" title="JSDemo">
           <div className="stack">
-            <p> <strong>Mini Search App (JSdemo)</strong></p>
+          <h3 className="text-xl font-bold mb-2">
+          Mini Search App (JSdemo)</h3>
             <p className=" mb-4">
             A simple JavaScript demo project: a user search app. <br />
-            Built with <strong>Vanilla JS, HTML5, and CSS3,</strong> Fetch user data asynchronously from a REST API .
+            Built with <strong>Vanilla JS, HTML5, and CSS3</strong>. Fetch user data asynchronously from a REST API .
             </p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn btn-accent" href="https://github.com/Erikaahide" target="_blank" rel="noreferrer">👁️ View</a>
-              <a className="btn btn-accent" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">Repo GitHub</a>
+              <a className="btn btn-accent5" href="https://github.com/Erikaahide" target="_blank" rel="noreferrer">👁️ View</a>
+              <a className="btn btn-accent5" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">GitHub Repo</a>
             </div>
           </div>
         </Section>
@@ -174,7 +176,8 @@ export default function App() {
         </Section>
         <Section id="adobe" title="AdobeSuite">
           <div className="stack">
-            <p><strong>Illustrator & Photoshop Book</strong></p>
+          <h3 className="text-xl font-bold mb-2">
+          Illustrator & Photoshop Book</h3>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent4" href="https://drive.google.com/file/d/1LXkoXs2C3OjuENXDobDhNGNGjYEuHxeY/view?usp=sharing" target="_blank" rel="noreferrer">📔 Book (PDF)</a>
             </div>
@@ -182,7 +185,8 @@ export default function App() {
         </Section>
         <Section id="contact" title="Contact">
           <div className="stack">
-            <p> <strong>Let's work together!!</strong></p>
+          <h3 className="text-xl font-bold mb-2">
+          Let's work together!!</h3>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent" href="mailto:eahidehernandez@gmail.com" rel="noreferrer">📧 Email</a>
               <a className="btn btn-accent" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">💼 LinkedIn</a>
