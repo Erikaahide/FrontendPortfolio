@@ -73,9 +73,10 @@ function HeroHome() {
       <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
         <a href="#about" className="btn btn-primary">About me</a>
         <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
-        <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
-        <a href="#JS" className="btn btn-accent5">JS Demo</a>
+        <a href="#JS" className="btn btn-accent5">JSDemo</a>
+        <a href="#SQL" className="btn btn-accent6">SQLDemo</a>
         <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
+        <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
         <a href="#contact" className="btn btn-accent">Contact</a>
       </div>
     </section>
@@ -122,6 +123,7 @@ export default function App() {
               className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow-md transition duration-300" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </Section>
+
         <Section id="aprendeShop" title="AprendeShop">
           <div className="stack">
             <h3 className="text-xl font-bold mb-2">
@@ -159,11 +161,11 @@ export default function App() {
 
         <Section id="JS" title="JSDemo">
           <div className="stack">
-          <h3 className="text-xl font-bold mb-2">
-          Mini Search App (JSdemo)</h3>
+            <h3 className="text-xl font-bold mb-2">
+              Mini Search App (JSdemo)</h3>
             <p className=" mb-4">
-            A simple JavaScript demo project: a user search app. <br />
-            Built with <strong>Vanilla JS, HTML5, and CSS3</strong>. Fetch user data asynchronously from a REST API .
+              A simple JavaScript demo project: a user search app. <br />
+              Built with <strong>Vanilla JS, HTML5, and CSS3</strong>. Fetch user data asynchronously from a REST API .
             </p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent5" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">👁️ View</a>
@@ -171,22 +173,43 @@ export default function App() {
             </div>
           </div>
         </Section>
+
+        <Section id="SQL" title="SQL">
+          <div className="stack">
+            <h3 className="text-xl font-bold mb-2">
+              SQL practice </h3>
+            <p className=" mb-4">
+              This repository contains my SQL practice exercises during the bootcamp. It includes examples of:  </p>
+            <ul className="list-disc list-inside space-y-1 mb-4">
+              <li>Table creation (CREATE TABLE)</li>
+              <li>Data insertion (INSERT INTO)</li>
+              <li>Basic queries (SELECT, WHERE, ORDER BY, DISTINCT)</li>
+              <li>Functions (LIKE, IN, BETWEEN, MONTH(), etc.)</li>
+              <li>Safe updates and deletes (UPDATE, DELETE)</li>
+            </ul>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+              <a className="btn btn-accent6" href="https://github.com/Erikaahide/SQLpractices" target="_blank" rel="noreferrer">GitHub Repo</a>
+            </div>
+          </div>
+        </Section>
+
         <Section id="fitapp" title="FitAppDemo">
           <p>Soon: calculate your macros and track the food you eat.</p>
         </Section>
         <Section id="adobe" title="AdobeSuite">
           <div className="stack">
-          <h3 className="text-xl font-bold mb-2">
-          Illustrator & Photoshop Book</h3>
+            <h3 className="text-xl font-bold mb-2">
+              Illustrator & Photoshop Book</h3>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent4" href="https://drive.google.com/file/d/1LXkoXs2C3OjuENXDobDhNGNGjYEuHxeY/view?usp=sharing" target="_blank" rel="noreferrer">📔 Book (PDF)</a>
             </div>
           </div>
         </Section>
+
         <Section id="contact" title="Contact">
           <div className="stack">
-          <h3 className="text-xl font-bold mb-2">
-          Let's work together!!</h3>
+            <h3 className="text-xl font-bold mb-2">
+              Let's work together!!</h3>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent" href="mailto:eahidehernandez@gmail.com" rel="noreferrer">📧 Email</a>
               <a className="btn btn-accent" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">💼 LinkedIn</a>

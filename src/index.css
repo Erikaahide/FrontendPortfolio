@@ -116,6 +116,12 @@ border-radius:80px;
   color: white;
 }
 
+.btn-accent6 {
+  background: var(--accent6);
+  border-color: transparent;
+  color: white;
+}
+
 /* Badges */
 .badge {
   display: inline-block;
