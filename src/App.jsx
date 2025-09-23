@@ -166,8 +166,8 @@ export default function App() {
             Built with <strong>Vanilla JS, HTML5, and CSS3</strong>. Fetch user data asynchronously from a REST API .
             </p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn btn-accent5" href="https://github.com/Erikaahide" target="_blank" rel="noreferrer">👁️ View</a>
-              <a className="btn btn-accent5" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a className="btn btn-accent5" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">👁️ View</a>
+              <a className="btn btn-accent5" href="https://github.com/Erikaahide/API-JS-PROMISES" target="_blank" rel="noreferrer">GitHub Repo</a>
             </div>
           </div>
         </Section>
