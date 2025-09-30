@@ -74,6 +74,7 @@ function HeroHome() {
         <a href="#about" className="btn btn-primary">About me</a>
         <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
         <a href="#JS" className="btn btn-accent5">JSDemo</a>
+        <a href="#figma" className="btn btn-accent7">Figma</a>
         <a href="#SQL" className="btn btn-accent6">SQLDemo</a>
         <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
         <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
@@ -170,6 +171,19 @@ export default function App() {
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent5" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">👁️ View</a>
               <a className="btn btn-accent5" href="https://github.com/Erikaahide/API-JS-PROMISES" target="_blank" rel="noreferrer">GitHub Repo</a>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="figma" title="Figma">
+          <div className="stack">
+            <h3 className="text-xl font-bold mb-2">
+            Wireframe, layout, mockup and prototype</h3>
+            <p className=" mb-4">
+            Find my latest UI mockups on Figma — they’re still a work in progress, but constantly evolving with new layouts and design explorations.
+            </p>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+              <a className="btn btn-accent7" href="https://www.figma.com/design/zsiRvaHp8P9v2CB2HxYtHE/Portfolio?node-id=0-1&t=1TMprCo3F1mFlZZx-1" target="_blank" rel="noreferrer">Portfolio</a>
             </div>
           </div>
         </Section>

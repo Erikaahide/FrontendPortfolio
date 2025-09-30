@@ -85,7 +85,7 @@ padding: 0 var(--space-4); }
 }
 
 .btn-circle{
-border-radius:80px;
+border-radius:100px;
 }
 
 .btn-accent {
@@ -118,6 +118,12 @@ border-radius:80px;
 
 .btn-accent6 {
   background: var(--accent6);
+  border-color: transparent;
+  color: white;
+}
+
+.btn-accent7 {
+  background: var(--accent7);
   border-color: transparent;
   color: white;
 }
