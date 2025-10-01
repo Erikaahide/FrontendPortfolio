@@ -11,8 +11,7 @@ I’m currently building this portfolio —  Work in Progress..
  **React + Vite**.  
 This project showcases my work, skills, and experience as a Full-Stack Developer.  
 
-**GitHubPages View**
-(https://erikaahide.github.io/FrontendPortfolio/)
+**[GitHubPages View](https://erikaahide.github.io/FrontendPortfolio/)**
 
 ## Tech Stack
 - React  
@@ -25,7 +24,7 @@ This project showcases my work, skills, and experience as a Full-Stack Developer
 Responsive design with TailwindCSS  
 Projects showcase section   
 Clean and minimal UI  
-[Figma Wireframe:] (https://www.figma.com/design/ZPpJGbMZmsWddn3i0icvXt/Portfolio?node-id=0-1&t=wQEUDl60nAlZEsqa-1)
+[Figma Wireframe](https://www.figma.com/design/ZPpJGbMZmsWddn3i0icvXt/Portfolio?node-id=0-1&t=wQEUDl60nAlZEsqa-1)
 
  ## About me & contact links 
 Hello, my name is Erika. I studied fashion design, which gave me strong skills in creativity, project management, and attention to detail. Recently, I decided to transition into the tech world, and now I’m a Java full-stack developer.  
