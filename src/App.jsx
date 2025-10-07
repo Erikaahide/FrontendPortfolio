@@ -209,8 +209,20 @@ export default function App() {
         </Section>
 
         <Section id="fitapp" title="FitAppDemo">
-          <p>Soon: calculate your macros and track the food you eat.</p>
+        <div className="stack">
+            <h3 className="text-xl font-bold mb-2">
+            Macro Calculator, Food Tracker, Shopping List, Fitness Blog and more.. </h3>
+            <p className=" mb-4">
+            This app is inspired by the bodybuilding lifestyle where nutrition is everything. - I’m currently building this demo
+            </p>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+              <a className="btn btn-accent2" href="https://erikaahide.github.io/FitApp/" target="_blank" rel="noreferrer">👁️ View Demo</a>
+              <a className="btn btn-accent2" href="https://github.com/Erikaahide/FitApp?tab=readme-ov-file" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a className="btn btn-accent2" href="https://www.figma.com/design/ZPpJGbMZmsWddn3i0icvXt/Portfolio?node-id=0-1&t=BCGzJieD65UEbvnu-0" target="_blank" rel="noreferrer">Wireframe</a>
+            </div>
+          </div>
         </Section>
+
         <Section id="adobe" title="AdobeSuite">
           <div className="stack">
             <h3 className="text-xl font-bold mb-2">
