@@ -74,9 +74,9 @@ function HeroHome() {
         <a href="#about" className="btn btn-primary">About me</a>
         <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
         <a href="#JS" className="btn btn-accent5">JSDemo</a>
+        <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
         <a href="#figma" className="btn btn-accent7">Figma</a>
         <a href="#SQL" className="btn btn-accent6">SQLDemo</a>
-        <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
         <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
         <a href="#contact" className="btn btn-accent">Contact</a>
       </div>
@@ -175,6 +175,21 @@ export default function App() {
           </div>
         </Section>
 
+        <Section id="fitapp" title="FitAppDemo">
+        <div className="stack">
+            <h3 className="text-xl font-bold mb-2">
+            Macro Calculator, Food Tracker, Shopping List, Fitness Blog and more.. </h3>
+            <p className=" mb-4">
+            This app is inspired by the bodybuilding lifestyle where nutrition is everything. - I’m currently building this demo.
+            </p>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+              <a className="btn btn-accent2" href="https://erikaahide.github.io/FitApp/" target="_blank" rel="noreferrer">👁️ View Demo</a>
+              <a className="btn btn-accent2" href="https://github.com/Erikaahide/FitApp?tab=readme-ov-file" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a className="btn btn-accent2" href="https://www.figma.com/design/ZPpJGbMZmsWddn3i0icvXt/Portfolio?node-id=0-1&t=BCGzJieD65UEbvnu-0" target="_blank" rel="noreferrer">Wireframe</a>
+            </div>
+          </div>
+        </Section>
+
         <Section id="figma" title="Figma">
           <div className="stack">
             <h3 className="text-xl font-bold mb-2">
@@ -204,21 +219,6 @@ export default function App() {
             </ul>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent6" href="https://github.com/Erikaahide/SQLpractices" target="_blank" rel="noreferrer">GitHub Repo</a>
-            </div>
-          </div>
-        </Section>
-
-        <Section id="fitapp" title="FitAppDemo">
-        <div className="stack">
-            <h3 className="text-xl font-bold mb-2">
-            Macro Calculator, Food Tracker, Shopping List, Fitness Blog and more.. </h3>
-            <p className=" mb-4">
-            This app is inspired by the bodybuilding lifestyle where nutrition is everything. - I’m currently building this demo
-            </p>
-            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn btn-accent2" href="https://erikaahide.github.io/FitApp/" target="_blank" rel="noreferrer">👁️ View Demo</a>
-              <a className="btn btn-accent2" href="https://github.com/Erikaahide/FitApp?tab=readme-ov-file" target="_blank" rel="noreferrer">GitHub Repo</a>
-              <a className="btn btn-accent2" href="https://www.figma.com/design/ZPpJGbMZmsWddn3i0icvXt/Portfolio?node-id=0-1&t=BCGzJieD65UEbvnu-0" target="_blank" rel="noreferrer">Wireframe</a>
             </div>
           </div>
         </Section>
