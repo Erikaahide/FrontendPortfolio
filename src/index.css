@@ -228,7 +228,7 @@ padding: 0 var(--space-4); }
 .dynamic-bg {
   background: linear-gradient(90deg, var(--primary), var(--accent), var(--accent3));
   background-size: 300% 300%;
-  animation: gradientShift 6s ease infinite;
+  animation: gradientShift 10s ease-in-out infinite;
 }
 
 @keyframes gradientShift {
