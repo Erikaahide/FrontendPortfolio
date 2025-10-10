@@ -65,20 +65,22 @@ function Navbar() {
 // --- Section: Hero Home -----------------------------------------------------
 function HeroHome() {
   return (
-    <section id="home" className="hero container">
-      <h1 className="hero-title">Portfolio</h1>
-      <p className="hero-sub">
-        Full‑Stack Developer & Fashion Designer. Design UI/UX, performance and accesibility.
-      </p>
-      <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
-        <a href="#about" className="btn btn-primary">About me</a>
-        <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
-        <a href="#JS" className="btn btn-accent5">JSDemo</a>
-        <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
-        <a href="#figma" className="btn btn-accent7">Figma</a>
-        <a href="#SQL" className="btn btn-accent6">SQLDemo</a>
-        <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
-        <a href="#contact" className="btn btn-accent">Contact</a>
+    <section id="home" className="hero dynamic-bg" style={{ padding: "4rem 0", color: "white", width: "100vw" }}>
+      <div className="container" style={{ maxWidth: "100%" }}>
+        <h1 className="hero-title">Welcome to my portfolio</h1>
+        <p className="hero-sub">
+          Full‑Stack Developer & Fashion Designer. Design UI/UX, performance and accesibility.
+        </p>
+        <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <a href="#about" className="btn btn-primary">About me</a>
+          <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
+          <a href="#JS" className="btn btn-accent5">JSDemo</a>
+          <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
+          <a href="#figma" className="btn btn-accent7">Figma</a>
+          <a href="#SQL" className="btn btn-accent6">SQLDemo</a>
+          <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
+          <a href="#contact" className="btn btn-accent">Contact</a>
+        </div>
       </div>
     </section>
   );
@@ -99,7 +101,7 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <main className="container">
+      <main>
         <HeroHome />
         <Section id="about" title="About me">
           <div className="stack">
