@@ -39,24 +39,36 @@ function ThemeToggle({ className = "" }) {
 }
 
 // --- UI: Navbar -------------------------------------------------------------
-function Navbar() {
+function Navbar({ lang, setLang }) {
   return (
     <header className="navbar">
       <div className="navbar-inner flex justify-between items-center px-4 w-full">
-  <div className="left-icons flex gap-2">
-  <a href="#home" className="bg-pink-500 hover:bg-pink-600 text-white font-medium 
+        <div className="left-icons flex gap-2">
+          <a
+            href="#home"
+            className="bg-pink-500 hover:bg-pink-600 text-white font-medium 
                w-12 h-12 rounded-full shadow-md transition duration-300 
-               flex items-center justify-center" style={{ paddingInline: ".5rem" }}>
-          <strong>EA</strong> </a>
-  </div>
-  <div className="right-icons flex gap-2">
-  <ThemeToggle />
-  </div>
-</div> 
+               flex items-center justify-center"
+            style={{ paddingInline: ".5rem" }}
+          >
+            <strong>EA</strong>
+          </a>
+        </div>
+
+        <div className="right-icons flex gap-2">
+          <ThemeToggle />
+          <button
+            className="btn btn-circle text-xl"
+            onClick={() => setLang(prev => (prev === "en" ? "es" : "en"))}
+            aria-label="Toggle language"
+          >
+            {lang === "en" ? "🇲🇽" : "🇺🇸"}
+          </button>
+        </div>
+      </div>
     </header>
   );
 }
-
 
 // --- Section: Hero Home -----------------------------------------------------
 function HeroHome() {
@@ -94,6 +106,9 @@ function Section({ id, title, children }) {
 
 // --- App --------------------------------------------------------------------
 export default function App() {
+  const [lang, setLang] = useState("en");
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
       <Navbar />
@@ -122,6 +137,52 @@ export default function App() {
               className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow-md transition duration-300" href="http://www.linkedin.com/in/erikaahg-desarrolladora-web" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </Section>
+
+        {/* ---  Modal -------------------------------------------------------------------- */}
+        {showModal && (
+          <div
+            className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4 animate-fadeIn"
+            onClick={() => setShowModal(false)} // Cierra al hacer click en fondo
+          >
+            {/* MODAL CARD */}
+            <div
+              className="relative w-full max-w-3xl rounded-[var(--radius)] p-[var(--space-6)] shadow-md backdrop-blur-sm animate-scaleIn"
+              style={{
+                backgroundColor: "rgba(5, 85, 76, 0.87)",
+                color: "var(--surface)",
+                border: "var(--border)",
+                fontFamily: "var(--font-sans)",
+                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              }}
+              onClick={(e) => e.stopPropagation()} // Evita cerrar si haces click dentro
+            >
+              {/* Botón cerrar */}
+              <button
+                className="absolute top-4 right-4 text-xl font-bold text-[var(--muted)] hover:text-[var(--text)]"
+                onClick={() => setShowModal(false)}
+                aria-label="Close modal"
+              >
+                ✕
+              </button>
+
+              {/* Contenido */}
+              <h4 className="text-lg font-semibold mb-4">Challenges & Solutions</h4>
+              <ul className="list-disc list-inside space-y-2 text-sm text-[var(--surface-muted)]">
+                <li>
+                  Properly configuring the deployment on AWS Elastic Beanstalk was a challenge due to environment variable errors.
+                  We resolved it by creating a clean and well-documented <code className="font-mono">application.properties</code> file.
+                </li>
+                <li>
+                  During JWT authentication, we encountered CORS issues in production, which we solved by adjusting the backend headers.
+                </li>
+                <li>
+                  We managed to synchronize local and deployed databases using migration scripts with MySQL Workbench.
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
+
 
         <Section id="aprendeShop" title="AprendeShop">
           <div className="stack">
@@ -154,6 +215,7 @@ export default function App() {
               <a className="btn btn-accent3" href="https://github.com/RubiPortuguez/Aprende-Shop/tree/develop" target="_blank" rel="noreferrer">🎨 Front End Repository</a>
               <a className="btn btn-accent3" href="https://github.com/RubiPortuguez/AprendeShop-Backend/tree/develop" target="_blank" rel="noreferrer">🧩 Back End Repository</a>
               <a className="btn btn-accent3" href="https://www.figma.com/design/MG8TBK9lzvWV1aU8pJSIPd/Borradores-AprendeShop?node-id=0-1&t=K5eREUPBSSRUzPKl-1" target="_blank" rel="noreferrer">🖥️ Figma</a>
+              <button className="btn btn-accent3" onClick={() => setShowModal(true)}> Problem solving </button>
             </div>
           </div>
         </Section>
@@ -174,11 +236,11 @@ export default function App() {
         </Section>
 
         <Section id="fitapp" title="FitAppDemo">
-        <div className="stack">
+          <div className="stack">
             <h3 className="text-xl font-bold mb-2">
-            Macro Calculator, Food Tracker, Shopping List, Fitness Blog and more.. </h3>
+              Macro Calculator, Food Tracker, Shopping List, Fitness Blog and more.. </h3>
             <p className=" mb-4">
-            This app is inspired by the bodybuilding lifestyle where nutrition is everything. - I’m currently building this demo.
+              This app is inspired by the bodybuilding lifestyle where nutrition is everything. - I’m currently building this demo.
             </p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent2" href="https://erikaahide.github.io/FitApp/" target="_blank" rel="noreferrer">👁️ View Demo</a>
@@ -191,9 +253,9 @@ export default function App() {
         <Section id="figma" title="Figma">
           <div className="stack">
             <h3 className="text-xl font-bold mb-2">
-            Wireframe, layout, mockup and prototype</h3>
+              Wireframe, layout, mockup and prototype</h3>
             <p className=" mb-4">
-            Find my latest UI mockups on Figma — they’re still a work in progress, but constantly evolving with new layouts and design explorations.
+              Find my latest UI mockups on Figma — they’re still a work in progress, but constantly evolving with new layouts and design explorations.
             </p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent7" href="https://www.figma.com/design/zsiRvaHp8P9v2CB2HxYtHE/Portfolio?node-id=0-1&t=1TMprCo3F1mFlZZx-1" target="_blank" rel="noreferrer">Portfolio</a>
