@@ -1,112 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import HeroHome from "./components/HeroHome";
+import Section from "./components/Section";
+import "./i18n"; // importa la configuración de idiomas
 
-// --- Simple theme hook (light/dark) ----------------------------------------
-function useTheme() {
-  const [theme, setTheme] = React.useState("light");
-
-  React.useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light" || saved === "dark") {
-      setTheme(saved);
-      document.documentElement.dataset.theme = saved;
-      return;
-    }
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initial = prefersDark ? "dark" : "light";
-    setTheme(initial);
-    document.documentElement.dataset.theme = initial;
-  }, []);
-
-  const toggle = () => {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    document.documentElement.dataset.theme = next;
-    localStorage.setItem("theme", next);
-  };
-
-  return { theme, toggle };
-}
-
-// --- UI: Theme Toggle -------------------------------------------------------
-function ThemeToggle({ className = "" }) {
-  const { theme, toggle } = useTheme();
-  return (
-    <button className={`btn btn-circle ${className}`} onClick={toggle} aria-label="Toggle theme">
-      <span aria-hidden>{theme === "dark" ? "☀️" : "🌙"}</span>
-      <span className="sr-only">Change theme</span>
-    </button>
-  );
-}
-
-// --- UI: Navbar -------------------------------------------------------------
-function Navbar({ lang, setLang }) {
-  return (
-    <header className="navbar">
-      <div className="navbar-inner flex justify-between items-center px-4 w-full">
-        <div className="left-icons flex gap-2">
-          <a
-            href="#home"
-            className="bg-pink-500 hover:bg-pink-600 text-white font-medium 
-               w-12 h-12 rounded-full shadow-md transition duration-300 
-               flex items-center justify-center"
-            style={{ paddingInline: ".5rem" }}
-          >
-            <strong>EA</strong>
-          </a>
-        </div>
-
-        <div className="right-icons flex gap-2">
-          <ThemeToggle />
-          <button
-            className="btn btn-circle text-xl"
-            onClick={() => setLang(prev => (prev === "en" ? "es" : "en"))}
-            aria-label="Toggle language"
-          >
-            {lang === "en" ? "🇲🇽" : "🇺🇸"}
-          </button>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-// --- Section: Hero Home -----------------------------------------------------
-function HeroHome() {
-  return (
-    <section id="home" className="hero dynamic-bg" style={{ padding: "4rem 0", color: "white", width: "100vw" }}>
-      <div className="container" style={{ maxWidth: "100%" }}>
-        <h1 className="hero-title">Welcome to my portfolio</h1>
-        <p className="hero-sub">
-          Full‑Stack Developer & Fashion Designer. Design UI/UX, performance and accesibility.
-        </p>
-        <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <a href="#about" className="btn btn-primary">About me</a>
-          <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
-          <a href="#JS" className="btn btn-accent5">JSDemo</a>
-          <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
-          <a href="#figma" className="btn btn-accent7">Figma</a>
-          <a href="#SQL" className="btn btn-accent6">SQLDemo</a>
-          <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
-          <a href="#contact" className="btn btn-accent">Contact</a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// --- Placeholder sections to scroll (replace later with pages/routes) --
-function Section({ id, title, children }) {
-  return (
-    <section id={id} className="container stack" style={{ padding: "3rem 0" }}>
-      <h2>{title}</h2>
-      <div className="card">{children}</div>
-    </section>
-  );
-}
-
-// --- App --------------------------------------------------------------------
 export default function App() {
-  const [lang, setLang] = useState("en");
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -304,6 +202,7 @@ export default function App() {
             </div>
           </div>
         </Section>
+
       </main>
       <footer className="container" style={{ padding: "2rem 0", opacity: .8 }}>
         <small className="muted">© {new Date().getFullYear()} ErikaA. All rights reserved.</small>

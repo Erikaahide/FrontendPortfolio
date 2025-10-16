@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import "./i18n";
 // 1) tokens PRIMERO
 import "./styles/tokens.css";
 
