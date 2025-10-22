@@ -5,11 +5,21 @@ import Section from "./components/Section";
 import "./i18n"; // importa la configuración de idiomas
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
+import { Code2, Server, Wrench } from "lucide-react";
+import { GraduationCap, Palette } from "lucide-react";
 
 
 export default function App() {
   const { t } = useTranslation();
   const [activeModal, setActiveModal] = useState(null);
+
+  const getModalClass = () => {
+    if (activeModal?.includes("fit")) return "modal-fit animate-fadeIn";
+    if (["about", "education", "skills"].includes(activeModal))
+      return "modal-aboutme animate-slideUp";
+    return "modal-aprende animate-zoomIn";
+  };
+
 
 
   return (
@@ -23,55 +33,172 @@ export default function App() {
             <h2 className="text-2xl font-bold mb-2">{t("about_intro")}</h2>
             <p className="mb-4">{t("about_text")}</p>
 
-            <h3 className="text-lg font-semibold mb-2">{t("skills_title")}</h3>
-            <p className="mb-4">{t("skills_list")}</p>
-
             <p>{t("about_linkedin_intro")}</p>
-            <a
-              className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow-md transition duration-300"
-              href="http://www.linkedin.com/in/erikaahg-desarrolladora-web"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t("about_linkedin_btn")}
-            </a>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+              <a
+                className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow-md transition duration-300"
+                href="http://www.linkedin.com/in/erikaahg-desarrolladora-web"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("about_linkedin_btn")}
+              </a>
+
+              <button
+                className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow-md transition duration-300"
+                onClick={() => setActiveModal("skills")}
+              >
+                {t("modal_skills_title")}
+              </button>
+
+              <button
+                className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow-md transition duration-300"
+                onClick={() => setActiveModal("education")}
+              >
+                {t("modal_education_title")}
+              </button>
+            </div>
           </div>
         </Section>
 
 
         {/* --- MODALES DINÁMICOS --- */}
         {activeModal && (
-          <div
-            className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4 animate-fadeIn"
-            onClick={() => setActiveModal(null)}
-          >
+          <div className="modal-overlay" onClick={() => setActiveModal(null)}>
             <div
-              className={`relative w-full max-w-3xl rounded-[var(--radius)] p-[var(--space-6)] shadow-xl backdrop-blur-md border border-white/10 transition-all duration-300
-     glow-border, glow-border-hover ${activeModal === "problem" || activeModal === "fit-problem"
-                  ? "bg-gradient-to-br from-green-700/85 to-emerald-900/75 text-emerald-50 animate-fadeIn"
-                  : activeModal === "storiesAS" || activeModal === "fit-stories"
-                    ? "bg-gradient-to-br from-cyan-600/85 to-blue-800/75 text-cyan-50 animate-slideUp"
-                    : activeModal === "roles" || activeModal === "fit-future"
-                      ? "bg-gradient-to-br from-pink-600/85 to-fuchsia-800/55 text-pink-50 animate-zoomIn"
-                      : "bg-zinc-800/60 text-white"
+              className={`modal-box glow-border glow-border-hover  ${getModalClass()}
+                  ? "modal-fit animate-fadeIn"
+                  : activeModal.includes("about")
+                    ? "modal-aboutme animate-slideUp"
+                    : "modal-aprende animate-zoomIn"
                 }`}
-
-
-              style={{
-                color: "var(--surface)",
-                border: "var(--border)",
-                fontFamily: "var(--font-sans)",
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-              }}
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute top-4 right-4 text-xl font-bold text-[var(--muted)] hover:text-[var(--text)] transition"
+                className="modal-close"
                 onClick={() => setActiveModal(null)}
                 aria-label="Close modal"
               >
                 ✕
               </button>
+
+              {/* --- SKILLS --- */}
+              {activeModal === "skills" && (
+                <>
+                  <h4 className="text-2xl font-bold mb-3 text-pink-100 flex items-center gap-2">
+                    <Wrench className="w-5 h-5 text-pink-200" />
+                    {t("modal_skills_title")}
+                  </h4>
+
+                  <p className="text-sm mb-6 text-[var(--surface-muted)]">
+                    {t("modal_skills_text")}
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {/* --- Frontend --- */}
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                      <h5 className="font-semibold text-pink-200 mb-3 flex items-center gap-2">
+                        <Code2 className="w-4 h-4 text-pink-300" />
+                        {t("modal_skills_frontend")}
+                      </h5>
+                      <ul className="list-disc list-inside text-sm space-y-1 text-[var(--surface-muted)]">
+                        <li>HTML5 / CSS3</li>
+                        <li>TailwindCSS</li>
+                        <li>Bootstrap</li>
+                        <li>React.js</li>
+                        <li>Figma (UI/UX Design)</li>
+                      </ul>
+                    </div>
+
+                    {/* --- Backend --- */}
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                      <h5 className="font-semibold text-pink-200 mb-3 flex items-center gap-2">
+                        <Server className="w-4 h-4 text-pink-300" />
+                        {t("modal_skills_backend")}
+                      </h5>
+                      <ul className="list-disc list-inside text-sm space-y-1 text-[var(--surface-muted)]">
+                        <li>Java / Spring Boot</li>
+                        <li>Node.js</li>
+                        <li>MySQL / JPA</li>
+                        <li>REST APIs / Postman</li>
+                        <li>Junit</li>
+                      </ul>
+                    </div>
+
+                    {/* --- Tools & Platforms --- */}
+                    <div className="md:col-span-2 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                      <h5 className="font-semibold text-pink-200 mb-3 flex items-center gap-2">
+                        <Wrench className="w-4 h-4 text-pink-300" />
+                        {t("modal_skills_tools")}
+                      </h5>
+                      <ul className="flex flex-wrap gap-3 text-sm text-[var(--surface-muted)]">
+                        {[
+                          "Git / GitHub",
+                          "Linux",
+                          "VS Code / Eclipse",
+                          "AWS ",
+                          "Agile / Scrum",
+                        ].map((tool) => (
+                          <li
+                            key={tool}
+                            className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/10 hover:bg-white/20 transition"
+                          >
+                            {tool}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* --- EDUCATION --- */}
+              {activeModal === "education" && (
+                <>
+                  <h4 className="text-2xl font-bold mb-3 text-pink-100 flex items-center gap-2">
+                    <GraduationCap className="w-5 h-5 text-pink-200" />
+                    {t("modal_education_title")}
+                  </h4>
+
+                  <p className="text-sm mb-6 text-[var(--surface-muted)]">
+                    {t("modal_about_education_intro")}
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {/* --- Full Stack Development --- */}
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                      <h5 className="font-semibold text-pink-200 mb-2 flex items-center gap-2">
+                        <GraduationCap className="w-4 h-4 text-pink-300" />
+                        {t("modal_about_fullstack")}
+                      </h5>
+                      <p className="text-sm text-[var(--surface-muted)] leading-relaxed">
+                        {t("modal_about_fullstack_desc")}
+                      </p>
+                      <ul className="list-disc list-inside mt-2 text-sm text-[var(--surface-muted)]">
+                        <li>{t("modal_about_fullstack_point1")}</li>
+                        <li>{t("modal_about_fullstack_point2")}</li>
+                        <li>{t("modal_about_fullstack_point3")}</li>
+                      </ul>
+                    </div>
+
+                    {/* --- Fashion Design --- */}
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                      <h5 className="font-semibold text-pink-200 mb-2 flex items-center gap-2">
+                        <Palette className="w-4 h-4 text-pink-300" />
+                        {t("modal_about_fashiondesign")}
+                      </h5>
+                      <p className="text-sm text-[var(--surface-muted)] leading-relaxed">
+                        {t("modal_about_fashiondesign_desc")}
+                      </p>
+                      <ul className="list-disc list-inside mt-2 text-sm text-[var(--surface-muted)]">
+                        <li>{t("modal_about_fashiondesign_point1")}</li>
+                        <li>{t("modal_about_fashiondesign_point2")}</li>
+                        <li>{t("modal_about_fashiondesign_point3")}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </>
+              )}
 
               {/* --- PROBLEM SOLVING MODAL (AprendeShop & FitApp) --- */}
               {(activeModal === "problem" || activeModal === "fit-problem") && (

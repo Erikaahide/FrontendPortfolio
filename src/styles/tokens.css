@@ -12,7 +12,7 @@
     --accent2: rgb(141, 205, 58);
     --accent3: #008876;
     --accent4: rgb(133, 146, 244);
-    --accent5: rgb(228, 209, 3);
+    --accent5: rgb(238, 224, 28);
     --accent6: rgb(60, 93, 192);
     --accent7: rgb(220, 125, 142);
   
@@ -49,7 +49,8 @@
     --text: #eef1f3;
     --muted: #a1a7af;
     --primary: #ff2ea6;
-    --accent:  #b24dff;
+    --accent:  #9645d5;
+    --accent5: rgb(228, 209, 3);
   
     --border: #24282c;
     --ring:   #4553ff;
