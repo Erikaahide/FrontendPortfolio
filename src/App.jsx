@@ -389,7 +389,7 @@ export default function App() {
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accentO" href="https://erikaahide.github.io/Odoo/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
               <a className="btn btn-accentO" href="https://github.com/Erikaahide/Odoo" target="_blank" rel="noreferrer">GitHub Repo</a>
-              <a className="btn btn-accentO" href="" target="_blank" rel="noreferrer">Wireframe</a>
+              <a className="btn btn-accentO" href="https://panic-circus-60529424.figma.site/" target="_blank" rel="noreferrer">Wireframe</a>
             </div>
           </div>
         </Section>
