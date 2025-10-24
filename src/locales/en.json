@@ -69,6 +69,7 @@
     "jsdemo_description": "A simple JavaScript demo project: a user search app. <br /> Built with <strong>Vanilla JS, HTML5, and CSS3</strong>. Fetch user data asynchronously from a REST API.",
     "fitapp_description": "Macro Calculator, Food Tracker, Shopping List, Fitness Blog and more..",
     "fitapp_text": "This app is inspired by the bodybuilding lifestyle where nutrition is everything. - I’m currently building this demo.",
+    "odoo_description": "Web mockup built with Bootstrap 4.6, SCSS, and a focus on desktop viewports (≥992px). It was created as part of a technical interview assessment to demonstrate skills in modern layout development, SCSS variable management, and project organization best practices.",
     "figma_description": "Wireframe, layout, mockup and prototype",
     "figma_text": "Find my latest UI mockups on Figma — they’re still a work in progress, but constantly evolving with new layouts and design explorations.",
     "portfolio_btn": "Portfolio",

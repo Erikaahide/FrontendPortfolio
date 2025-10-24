@@ -140,6 +140,12 @@ padding: 0 var(--space-4); }
   color: white;
 }
 
+.btn-accentO {
+  background: var(--accentO);
+  border-color: transparent;
+  color: white;
+}
+
 /* Badges */
 .badge {
   display: inline-block;

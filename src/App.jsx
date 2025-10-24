@@ -62,7 +62,7 @@ export default function App() {
         </Section>
 
 
-        {/* --- MODALES DINÁMICOS --- */}
+        {/* --- Dinamic modals --- */}
         {activeModal && (
           <div className="modal-overlay" onClick={() => setActiveModal(null)}>
             <div
@@ -152,7 +152,7 @@ export default function App() {
                 </>
               )}
 
-              {/* --- EDUCATION --- */}
+              {/* --- Education --- */}
               {activeModal === "education" && (
                 <>
                   <h4 className="text-2xl font-bold mb-3 text-pink-100 flex items-center gap-2">
@@ -328,6 +328,19 @@ export default function App() {
               >
                 {t("future_features_btn")}
               </button>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="odoo" title="Odoo">
+          <div className="stack">
+            <h3 className="text-xl font-bold mb-2">Odoo design excersice</h3>
+            <p className=" mb-4">
+              {t("odoo_description")}</p>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+            <a className="btn btn-accentO" href="https://erikaahide.github.io/Odoo/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
+              <a className="btn btn-accentO" href="https://github.com/Erikaahide/Odoo" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a className="btn btn-accentO" href="" target="_blank" rel="noreferrer">Wireframe</a>
             </div>
           </div>
         </Section>

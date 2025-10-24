@@ -15,7 +15,8 @@
     --accent5: rgb(238, 224, 28);
     --accent6: rgb(60, 93, 192);
     --accent7: rgb(220, 125, 142);
-  
+    --accentO: rgb(107, 77, 102);
+
     /* Borde / focus ring */
     --border: #e6e8eb;
     --ring:   #9680ce;
