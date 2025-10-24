@@ -5,8 +5,7 @@ import Section from "./components/Section";
 import "./i18n"; // importa la configuración de idiomas
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
-import { Code2, Server, Wrench } from "lucide-react";
-import { GraduationCap, Palette } from "lucide-react";
+import { Wrench, Server, GraduationCap, Palette, BookOpen, Laptop, Code2, } from "lucide-react";
 
 
 export default function App() {
@@ -15,12 +14,10 @@ export default function App() {
 
   const getModalClass = () => {
     if (activeModal?.includes("fit")) return "modal-fit animate-fadeIn";
-    if (["about", "education", "skills"].includes(activeModal))
+    if (["about", "education", "skills", "extra_education"].includes(activeModal))
       return "modal-aboutme animate-slideUp";
     return "modal-aprende animate-zoomIn";
   };
-
-
 
   return (
     <div>
@@ -56,6 +53,12 @@ export default function App() {
                 onClick={() => setActiveModal("education")}
               >
                 {t("modal_education_title")}
+              </button>
+              <button
+                className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow-md transition duration-300"
+                onClick={() => setActiveModal("extra_education")}
+              >
+                {t("modal_extra_education_title")}
               </button>
             </div>
           </div>
@@ -200,6 +203,52 @@ export default function App() {
                 </>
               )}
 
+              {/* --- Extra Education --- */}
+              {activeModal === "extra_education" && (
+                <>
+                  <h4 className="text-2xl font-bold mb-3 text-pink-100 flex items-center gap-2">
+                    <BookOpen className="w-5 h-5 text-pink-200" />
+                    {t("modal_extra_education_title")}
+                  </h4>
+
+                  <p className="text-sm mb-6 text-[var(--surface-muted)]">
+                    {t("modal_extra_education_intro")}
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {/* --- Tech Workshops & Certifications --- */}
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                      <h5 className="font-semibold text-pink-200 mb-2 flex items-center gap-2">
+                        <Laptop className="w-4 h-4 text-pink-300" />
+                        {t("modal_extra_education_tech")}
+                      </h5>
+                      <ul className="list-disc list-inside text-sm text-[var(--surface-muted)] space-y-1">
+                        <li>Skill share - Figma Pro: Auto Layouts, Grids & Components</li>
+                        <li>Fundaula - Java</li>
+                        <li>Desafío Latam - CSS, Figma, Git, Web development</li>
+                        <li>Santander Open Academy – Gestión de Proyectos y Fundamentos de metodología Agile</li>
+                        <li>Coursera - Selenium Course</li>
+                      </ul>
+                    </div>
+
+                    {/* --- Creative & Professional Training --- */}
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
+                      <h5 className="font-semibold text-pink-200 mb-2 flex items-center gap-2">
+                        <Palette className="w-4 h-4 text-pink-300" />
+                        {t("modal_extra_education_design")}
+                      </h5>
+                      <ul className="list-disc list-inside text-sm text-[var(--surface-muted)] space-y-1">
+                        <li>Cisco Networking Academy – English for IT  (B2 - CEFR)</li>
+                        <li>Berlitz – English Communication for Professionals</li>
+                        <li>EF SET Cetification (C1)</li>
+                        <li>Domestika - Adobe Creative Suite</li>
+                        <li>INSIDE LVMH - Fashion Design, Innovation & Cutomer experience</li>
+                      </ul>
+                    </div>
+                  </div>
+                </>
+              )}
+
               {/* --- PROBLEM SOLVING MODAL (AprendeShop & FitApp) --- */}
               {(activeModal === "problem" || activeModal === "fit-problem") && (
                 <>
@@ -338,7 +387,7 @@ export default function App() {
             <p className=" mb-4">
               {t("odoo_description")}</p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-            <a className="btn btn-accentO" href="https://erikaahide.github.io/Odoo/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
+              <a className="btn btn-accentO" href="https://erikaahide.github.io/Odoo/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
               <a className="btn btn-accentO" href="https://github.com/Erikaahide/Odoo" target="_blank" rel="noreferrer">GitHub Repo</a>
               <a className="btn btn-accentO" href="" target="_blank" rel="noreferrer">Wireframe</a>
             </div>
