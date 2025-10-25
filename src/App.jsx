@@ -358,7 +358,7 @@ export default function App() {
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent2" href="https://erikaahide.github.io/FitApp/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
               <a className="btn btn-accent2" href="https://github.com/Erikaahide/FitApp?tab=readme-ov-file" target="_blank" rel="noreferrer">GitHub Repo</a>
-              <a className="btn btn-accent2" href="https://www.figma.com/design/ZPpJGbMZmsWddn3i0icvXt/Portfolio?node-id=0-1&t=BCGzJieD65UEbvnu-0" target="_blank" rel="noreferrer">Wireframe</a>
+              <a className="btn btn-accent2" href="https://www.figma.com/design/zsiRvaHp8P9v2CB2HxYtHE/Portfolio?t=1vvkAoR8YqURUruz-1" target="_blank" rel="noreferrer">Wireframe</a>
               <button
                 className="btn btn-accent2"
                 onClick={() => setActiveModal("fit-problem")}
