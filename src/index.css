@@ -146,6 +146,12 @@ padding: 0 var(--space-4); }
   color: white;
 }
 
+.btn-accentB {
+  background: var(--accentB);
+  border-color: transparent;
+  color: white;
+}
+
 /* Badges */
 .badge {
   display: inline-block;

@@ -14,6 +14,7 @@ export default function App() {
 
   const getModalClass = () => {
     if (activeModal?.includes("fit")) return "modal-fit animate-fadeIn";
+    if (activeModal?.includes("birdman")) return "modal-birdman animate-fadeIn";
     if (["about", "education", "skills", "extra_education"].includes(activeModal))
       return "modal-aboutme animate-slideUp";
     return "modal-aprende animate-zoomIn";
@@ -276,6 +277,20 @@ export default function App() {
                   </ul>
                 </>
               )}
+              {/* --- USER STORIES - Birdman Improvements --- */}
+              {activeModal === "birdman-stories" && (
+                <>
+                  <h4 className="text-lg font-semibold mb-4">
+                    {t("modal_birdman_stories_title")}
+                  </h4>
+                  <ul className="list-disc list-inside space-y-2 text-sm text-[var(--surface-muted)]">
+                    <li>{t("modal_birdman_story_1")}</li>
+                    <li>{t("modal_birdman_story_2")}</li>
+                    <li>{t("modal_birdman_story_3")}</li>
+                  </ul>
+                </>
+              )}
+
 
               {/* --- TEAM ROLES --- */}
               {activeModal === "roles" && (
@@ -303,6 +318,8 @@ export default function App() {
             </div>
           </div>
         )}
+
+
 
         <Section id="aprendeShop" title="AprendeShop">
           <div className="stack">
@@ -390,6 +407,19 @@ export default function App() {
               <a className="btn btn-accentO" href="https://erikaahide.github.io/Odoo/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
               <a className="btn btn-accentO" href="https://github.com/Erikaahide/Odoo" target="_blank" rel="noreferrer">GitHub Repo</a>
               <a className="btn btn-accentO" href="https://panic-circus-60529424.figma.site/" target="_blank" rel="noreferrer">Wireframe</a>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="improve" title="Improvements">
+          <div className="stack">
+            <h3 className="text-xl font-bold mb-2">Birdman Web Improvements</h3>
+            <p className=" mb-4">
+              {t("improve_description")}</p>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+              <a className="btn btn-accentB" href="https://erikaahide.github.io/Birdman-Improvements/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
+              <a className="btn btn-accentB" href="https://github.com/Erikaahide/Birdman-Improvements" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <button className="btn btn-accentB" onClick={() => setActiveModal("birdman-stories")}>{t("user_stories_btn")}</button>
             </div>
           </div>
         </Section>

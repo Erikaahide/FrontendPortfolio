@@ -46,6 +46,10 @@
 
   --accent-aprende-from: 170 90% 30%;
   --accent-aprende-to: 170 50% 18%;
+
+
+  --accent-improve-from: 210 65% 45%; 
+  --accent-improve-to: 210 45% 25%; 
 }
 
 /* --- DARK MODE --- */
@@ -58,6 +62,9 @@
 
   --accent-aprende-from: 170 80% 40%;
   --accent-aprende-to: 170 50% 22%;
+
+  --accent-improve-from: 210 70% 60%; 
+  --accent-improve-to: 210 60% 35%;
 }
 
 /* ============================================================
@@ -104,6 +111,16 @@ BASE DE MODALES
     to bottom right,
     hsl(var(--accent-fit-from) / 0.9),
     hsl(var(--accent-fit-to) / 0.85)
+  );
+  color: hsl(80 100% 95%);
+}
+
+/* Improvements */
+.modal-birdman {
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--accent-improve-from) / 0.9),
+    hsl(var(--accent-improve-to) / 0.85)
   );
   color: hsl(80 100% 95%);
 }
