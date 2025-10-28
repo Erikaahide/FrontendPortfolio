@@ -12,9 +12,11 @@ export default function HeroHome() {
         <div className="flex gap-3 justify-center flex-wrap mt-4">
           <a href="#about" className="btn btn-primary">{t("about_title")}</a>
           <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
-          <a href="#JS" className="btn btn-accent5">JSDemo</a>
+          <a href="#improve" className="btn btn-accentB">Improvements</a>
           <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
+          <a href="#odoo" className="btn btn-accentO">Excersice</a>
           <a href="#figma" className="btn btn-accent7">Figma</a>
+          <a href="#JS" className="btn btn-accent5">JSDemo</a>
           <a href="#SQL" className="btn btn-accent6">SQLDemo</a>
           <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
           <a href="#contact" className="btn btn-accent">{t("contact_title")}</a>

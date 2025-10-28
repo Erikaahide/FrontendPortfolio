@@ -350,19 +350,16 @@ export default function App() {
           </div>
         </Section>
 
-        <Section id="JS" title="JSDemo">
+        <Section id="improve" title="Improvements">
           <div className="stack">
-            <h3 className="text-xl font-bold mb-2">
-              Mini Search App (JSdemo)</h3>
-            <p className="mb-4">
-              <Trans i18nKey="jsdemo_description">
-                A simple JavaScript demo project: a user search app. <br />
-                Built with <strong>Vanilla JS, HTML5, and CSS3</strong>. Fetch user data asynchronously from a REST API.
-              </Trans>
-            </p>
+            <h3 className="text-xl font-bold mb-2">Birdman Web Improvements</h3>
+            <p className=" mb-4">
+              {t("improve_description")}</p>
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn btn-accent5" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
-              <a className="btn btn-accent5" href="https://github.com/Erikaahide/API-JS-PROMISES" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a className="btn btn-accentB" href="https://erikaahide.github.io/Birdman-Improvements/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
+              <a className="btn btn-accentB" href="https://mx.birdman.com/?srsltid=AfmBOoqRKqiBwmBaszMRHu67mPj-ZH0bITLB6EnWoO56ytlSL86Y6cVi" target="_blank" rel="noreferrer">Real website</a>
+              <a className="btn btn-accentB" href="https://github.com/Erikaahide/Birdman-Improvements" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <button className="btn btn-accentB" onClick={() => setActiveModal("birdman-stories")}>{t("user_stories_btn")}</button>
             </div>
           </div>
         </Section>
@@ -411,19 +408,6 @@ export default function App() {
           </div>
         </Section>
 
-        <Section id="improve" title="Improvements">
-          <div className="stack">
-            <h3 className="text-xl font-bold mb-2">Birdman Web Improvements</h3>
-            <p className=" mb-4">
-              {t("improve_description")}</p>
-            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-              <a className="btn btn-accentB" href="https://erikaahide.github.io/Birdman-Improvements/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
-              <a className="btn btn-accentB" href="https://github.com/Erikaahide/Birdman-Improvements" target="_blank" rel="noreferrer">GitHub Repo</a>
-              <button className="btn btn-accentB" onClick={() => setActiveModal("birdman-stories")}>{t("user_stories_btn")}</button>
-            </div>
-          </div>
-        </Section>
-
         <Section id="figma" title="Figma">
           <div className="stack">
             <h3 className="text-xl font-bold mb-2">{t("figma_description")}</h3>
@@ -432,6 +416,23 @@ export default function App() {
             <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
               <a className="btn btn-accent7" href="https://www.figma.com/design/zsiRvaHp8P9v2CB2HxYtHE/Portfolio?node-id=0-1&t=1TMprCo3F1mFlZZx-1" target="_blank" rel="noreferrer">{t("portfolio_btn")}</a>
               <a className="btn btn-accent7" href="https://www.figma.com/design/ZPpJGbMZmsWddn3i0icvXt/Portfolio?node-id=0-1&t=BCGzJieD65UEbvnu-0" target="_blank" rel="noreferrer">Wireframe</a>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="JS" title="JSDemo">
+          <div className="stack">
+            <h3 className="text-xl font-bold mb-2">
+              Mini Search App API (JSdemo)</h3>
+            <p className="mb-4">
+              <Trans i18nKey="jsdemo_description">
+                A simple JavaScript demo project: a user search app. <br />
+                Built with <strong>Vanilla JS, HTML5, and CSS3</strong>. Fetch user data asynchronously from a REST API.
+              </Trans>
+            </p>
+            <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
+              <a className="btn btn-accent5" href="https://erikaahide.github.io/API-JS-PROMISES/" target="_blank" rel="noreferrer">{t("view_btn")}</a>
+              <a className="btn btn-accent5" href="https://github.com/Erikaahide/API-JS-PROMISES" target="_blank" rel="noreferrer">GitHub Repo</a>
             </div>
           </div>
         </Section>
