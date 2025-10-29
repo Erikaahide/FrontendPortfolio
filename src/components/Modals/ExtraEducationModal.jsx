@@ -25,14 +25,13 @@ export default function ExtraEducationModal({ onClose }) {
               {t("modal_extra_education_tech")}
             </h5>
             <ul className="list-disc list-inside text-sm text-[var(--surface-muted)] space-y-1">
+              <li>Google - Foundations of User Experience (UX) Design</li>
               <li>Skill share - Figma Pro: Auto Layouts, Grids & Components</li>
               <li>Fundaula - Java</li>
               <li>Desafío Latam - CSS, Figma, Git, Web development</li>
               <li>Santander Open Academy – Gestión de Proyectos y Fundamentos de metodología Agile</li>
-              <li>Coursera - Selenium Course</li>
             </ul>
           </div>
-
           <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition">
             <h5 className="font-semibold text-pink-200 mb-2 flex items-center gap-2">
               <Palette className="w-4 h-4 text-pink-300" />
