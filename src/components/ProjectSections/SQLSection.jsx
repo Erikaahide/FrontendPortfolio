@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../Section";
 import { useTranslation } from "react-i18next";
+import { Github } from "lucide-react";
 
 export default function SQLSection() {
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ export default function SQLSection() {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub Repo
+              <Github size={18}></Github> GitHub Repo
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../Section";
 import { useTranslation } from "react-i18next";
+import { Book } from "lucide-react";
 
 export default function AdobeSection() {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ export default function AdobeSection() {
             target="_blank"
             rel="noreferrer"
           >
-            {t("portfolio_PDF_btn")}
+            <Book size={18} /> {t("portfolio_PDF_btn")}
           </a>
         </div>
       </div>

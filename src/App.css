@@ -50,6 +50,9 @@
 
   --accent-improve-from: 210 65% 45%; 
   --accent-improve-to: 210 45% 25%; 
+
+  --accent-improve-from: hsl(170 80% 40%);
+  --accent-improve-to: hsl(170 50% 22%);
 }
 
 /* --- DARK MODE --- */
@@ -65,6 +68,9 @@
 
   --accent-improve-from: 210 70% 60%; 
   --accent-improve-to: 210 60% 35%;
+
+  --accent-improve-from: hsl(170 70% 60%);
+  --accent-improve-to: hsl(170 40% 35%);
 }
 
 /* ============================================================

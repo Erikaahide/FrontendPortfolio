@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../Section";
 import { useTranslation } from "react-i18next";
+import { Github, Eye } from "lucide-react";
 
 export default function BirdmanSection({ setActiveModal }) {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ export default function BirdmanSection({ setActiveModal }) {
             target="_blank"
             rel="noreferrer"
           >
-            {t("view_btn")}
+             <Eye size={18} /> {t("view_btn")}
           </a>
           <a
             className="btn btn-accentB"
@@ -33,7 +34,7 @@ export default function BirdmanSection({ setActiveModal }) {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub Repo
+            <Github size={18}></Github> GitHub Repo
           </a>
           <button
             className="btn btn-accentB"

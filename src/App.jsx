@@ -3,8 +3,12 @@ import Navbar from "./components/Navbar";
 import HeroHome from "./components/HeroHome";
 import Footer from "./components/Footer";
 import AboutSection from "./components/AboutSection";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// 🔸 Importación de secciones
+// === Páginas ===
+import AprendeShopDetail from "./pages/AprendeShopDetail";
+
+// Importación de secciones
 import AprendeShopSection from "./components/ProjectSections/AprendeShopSection";
 import BirdmanSection from "./components/ProjectSections/BirdmanSection";
 import FitAppSection from "./components/ProjectSections/FitAppSection";
@@ -15,7 +19,7 @@ import SQLSection from "./components/ProjectSections/SQLSection";
 import AdobeSection from "./components/ProjectSections/AdobeSection";
 import ContactSection from "./components/ProjectSections/ContactSection";
 
-// 🔸 Importación de modales
+// Importación de modales
 import SkillsModal from "./components/Modals/SkillsModal";
 import EducationModal from "./components/Modals/EducationModal";
 import ExtraEducationModal from "./components/Modals/ExtraEducationModal";
@@ -28,21 +32,34 @@ export default function App() {
   const [activeModal, setActiveModal] = useState(null);
 
   return (
-    <div>
+    <Router basename="/FrontendPortfolio">
       <Navbar />
-      <main>
-        <HeroHome />
-        <AboutSection setActiveModal={setActiveModal} />
-        <AprendeShopSection setActiveModal={setActiveModal} />
-        <BirdmanSection setActiveModal={setActiveModal} />
-        <FitAppSection setActiveModal={setActiveModal} />
-        <OdooSection />
-        <FigmaSection />
-        <JSDemoSection />
-        <SQLSection />
-        <AdobeSection />
-        <ContactSection />
-      </main>
+
+      <Routes>
+        {/* HOME */}
+        <Route
+          path="/"
+          element={
+            <main>
+              <HeroHome />
+              <AboutSection setActiveModal={setActiveModal} />
+              <AprendeShopSection setActiveModal={setActiveModal} />
+              <BirdmanSection setActiveModal={setActiveModal} />
+              <FitAppSection setActiveModal={setActiveModal} />
+              <OdooSection />
+              <FigmaSection />
+              <JSDemoSection />
+              <SQLSection />
+              <AdobeSection />
+              <ContactSection />
+            </main>
+          }
+        />
+
+        {/* DETALLE APRENDESHOP */}
+        <Route path="/aprendeshop" element={<AprendeShopDetail />} />
+      </Routes>
+
       <Footer />
 
       {/* Render dinámico de modales */}
@@ -55,7 +72,6 @@ export default function App() {
       {activeModal === "extra_education" && (
         <ExtraEducationModal onClose={() => setActiveModal(null)} />
       )}
-
       {(activeModal === "problem" || activeModal === "fit-problem") && (
         <ProblemModal
           onClose={() => setActiveModal(null)}
@@ -68,16 +84,12 @@ export default function App() {
           activeModal={activeModal}
         />
       )}
-
       {activeModal === "birdman-stories" && (
         <BirdmanModal onClose={() => setActiveModal(null)} />
-      )}
-      {activeModal === "roles" && (
-        <RolesModal onClose={() => setActiveModal(null)} />
       )}
       {activeModal === "fit-future" && (
         <FitFutureModal onClose={() => setActiveModal(null)} />
       )}
-    </div>
+    </Router>
   );
 }

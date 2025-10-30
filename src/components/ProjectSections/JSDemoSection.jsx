@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../Section";
 import { useTranslation, Trans } from "react-i18next";
+import { Github, Eye } from "lucide-react";
 
 export default function JSDemoSection() {
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ export default function JSDemoSection() {
             target="_blank"
             rel="noreferrer"
           >
-            {t("view_btn")}
+            <Eye size={18} /> {t("view_btn")}
           </a>
           <a
             className="btn btn-accent5"
@@ -34,7 +35,7 @@ export default function JSDemoSection() {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub Repo
+               <Github size={18}></Github> GitHub Repo
           </a>
         </div>
       </div>
