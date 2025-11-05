@@ -98,20 +98,20 @@ export default function AprendeShopDetail() {
           </p>
         </section>
 
-      {/* === UX / DESIGN SPRINT PROCESS === */}
-<section className="animate-scaleIn">
-  <h2 className="as-heading">{t("ux_process_title")}</h2>
+        {/* === UX / DESIGN SPRINT PROCESS === */}
+        <section className="animate-scaleIn">
+          <h2 className="as-heading">{t("ux_process_title")}</h2>
 
-  <div className="as-ux-grid">
-    {["empathize", "define", "ideate", "prototype", "test"].map((key, i) => (
-      <div key={key} className="as-ux-step">
-        <div className="as-ux-index">{i + 1}</div>
-        <h3>{t(`ux_${key}_title`)}</h3>
-        <p>{t(`ux_${key}_desc`)}</p>
-      </div>
-    ))}
-  </div>
-</section>
+          <div className="as-ux-grid">
+            {["empathize", "define", "ideate", "prototype", "test"].map((key, i) => (
+              <div key={key} className="as-ux-step">
+                <div className="as-ux-index">{i + 1}</div>
+                <h3>{t(`ux_${key}_title`)}</h3>
+                <p>{t(`ux_${key}_desc`)}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
 
         {/* === SECTIONS (MODALES) === */}
