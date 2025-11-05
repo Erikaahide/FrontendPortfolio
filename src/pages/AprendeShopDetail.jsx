@@ -1,77 +1,174 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, ExternalLink, Figma, Github } from "lucide-react";
+import {
+  ASHomeModal,
+  ASNosotrasModal,
+  ASContactoModal,
+  ASPerfilModal,
+  ASRegistroModal,
+  ASLoginModal,
+  ASForoModal,
+  ASClasesModal,
+  ASCarritoModal,
+} from "../components/Modals/AprendeShop";
 
 export default function AprendeShopDetail() {
   const { t } = useTranslation();
+  const [activeModal, setActiveModal] = useState(null);
+  const closeModal = () => setActiveModal(null);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--surface)] text-[var(--text)]">
-
+    <div className="aprendeshop-page">
       {/* === HERO === */}
-      <section className="relative bg-gradient-to-r from-[var(--accent-improve-from)] to-[var(--accent-improve-to)] text-white py-20 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl text-muted font-bold mb-4">AprendeShop</h1>
-          <p className="text-lg opacity-90">{t("aprendeshop_detail_subtitle")}</p>
+      <section className="as-hero">
+        <div className="as-hero-content">
+          <h1>AprendeShop</h1>
+          <p>{t("aprendeshop_detail_subtitle")}</p>
         </div>
-        <a
-          href="/"
-          className="absolute top-6 left-6 flex items-center gap-2 text-white opacity-90 hover:opacity-100 transition"
-        >
+
+        <a href="/" className="as-backlink">
           <ArrowLeft size={18} />
           <span>{t("back_to_portfolio")}</span>
         </a>
       </section>
 
-      {/* === OVERVIEW === */}
-      <main className="flex-grow px-6 py-12 max-w-4xl mx-auto space-y-16">
-        <section>
-          <h2 className="text-2xl font-bold mb-3">{t("project_overview_title")}</h2>
-          <p className="leading-relaxed text-[var(--text-muted)]">
+      {/* === BODY === */}
+      <main className="as-body">
+        {/* Overview */}
+        <section className="as-section animate-scaleIn">
+          <h3 className="as-text-muted text-center">
             {t("project_overview_text")}
-          </p>
+          </h3>
         </section>
 
-        {/* === UX PROCESS === */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6">{t("ux_process_title")}</h2>
-          <div className="grid md:grid-cols-5 gap-6 text-center">
-            {[
-              { key: "understand" },
-              { key: "ideate" },
-              { key: "design" },
-              { key: "develop" },
-              { key: "validate" },
-            ].map((s, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div className="w-10 h-10 rounded-full bg-[var(--accent-improve-from)] text-white flex items-center justify-center font-semibold mb-2">
-                  {i + 1}
-                </div>
-                <h3 className="font-semibold mb-1">{t(`ux_${s.key}_title`)}</h3>
-                <p className="text-sm opacity-80">{t(`ux_${s.key}_desc`)}</p>
-              </div>
-            ))}
+        {/* Technologies */}
+        <section className="as-section animate-scaleIn">
+          <h2 className="as-heading">{t("technologies_title")}</h2>
+          <div className="card">
+            <ul className="pretty-bullets">
+              {t("technologies_list")
+                .split(". ")
+                .filter(Boolean)
+                .map((feature, i) => (
+                  <li key={i}>{feature.trim()}.</li>
+                ))}
+            </ul>
           </div>
         </section>
 
-        {/* === ROLE & DURATION === */}
-        <section className="grid md:grid-cols-2 gap-6">
+        {/* Role & Duration */}
+        <section className="as-section grid md:grid-cols-2 gap-10 animate-fadeIn">
           <div>
-            <h2 className="text-2xl font-bold mb-2">{t("my_role_title")}</h2>
-            <p className="leading-relaxed text-[var(--text-muted)]">
+            <h2 className="as-heading">{t("my_role_title")}</h2>
+            <p className="as-text-muted text-justify">
               {t("my_role_text")}
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-2">{t("duration_title")}</h2>
-            <p>{t("duration_text")}</p>
+            <h2 className="as-heading">{t("duration_title")}</h2>
+            <p className="as-text-muted text-lg">
+              {t("duration_text")}
+            </p>
           </div>
         </section>
 
-        {/* === TECHNICAL SECTION === */}
-        <section>
-          <h2 className="text-2xl font-bold mb-4">{t("technical_title")}</h2>
-          <ul className="list-disc list-inside space-y-2 text-[var(--text-muted)]">
+        {/* === FEATURES === */}
+        <section className="animate-scaleIn">
+          <h2 className="as-heading">
+            {t("features_title")}
+          </h2>
+          <ul className="pretty-bullets list-disc list-inside space-y-2 text-[var(--text-muted)] text-justify">
+            {t("features_list")
+              .split(". ")
+              .filter(Boolean)
+              .map((feature, i) => (
+                <li key={i}>{feature.trim()}.</li>
+              ))}
+          </ul>
+        </section>
+
+        {/* === BASED ON (PURPOSE & CONTEXT) === */}
+        <section className="animate-fadeIn">
+          <h2 className="as-heading">
+            {t("based_on_title")}
+          </h2>
+          <p className="leading-relaxed text-[var(--text-muted)] text-justify">
+            {t("based_on_text")}
+          </p>
+        </section>
+
+      {/* === UX / DESIGN SPRINT PROCESS === */}
+<section className="animate-scaleIn">
+  <h2 className="as-heading">{t("ux_process_title")}</h2>
+
+  <div className="as-ux-grid">
+    {["empathize", "define", "ideate", "prototype", "test"].map((key, i) => (
+      <div key={key} className="as-ux-step">
+        <div className="as-ux-index">{i + 1}</div>
+        <h3>{t(`ux_${key}_title`)}</h3>
+        <p>{t(`ux_${key}_desc`)}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+        {/* === SECTIONS (MODALES) === */}
+        <section className="animate-fadeIn text-center">
+          <h2 className="as-heading">
+            AprendeShop Project
+          </h2>
+
+          {/* Botones de acceso a los modales */}
+          <div className="grid sm:grid-cols-3 gap-3 justify-center">
+            <button className="btn btn-accent3" onClick={() => setActiveModal("home")}>
+              Home
+            </button>
+            <button className="btn btn-accent3" onClick={() => setActiveModal("nosotras")}>
+              Nosotras
+            </button>
+            <button className="btn btn-accent3" onClick={() => setActiveModal("contacto")}>
+              Contacto
+            </button>
+            <button className="btn btn-accent3" onClick={() => setActiveModal("foro")}>
+              Foro
+            </button>
+            <button className="btn btn-accent3" onClick={() => setActiveModal("clases")}>
+              Clases
+            </button>
+            <button className="btn btn-accent3" onClick={() => setActiveModal("carrito")}>
+              Carrito
+            </button>
+            <button className="btn btn-accent3" onClick={() => setActiveModal("perfil")}>
+              Perfil
+            </button>
+            <button className="btn btn-accent3" onClick={() => setActiveModal("registro")}>
+              Registro
+            </button>
+            <button className="btn btn-accent3" onClick={() => setActiveModal("login")}>
+              LogIn
+            </button>
+          </div>
+
+          {/* Render dinámico de los modales */}
+          {activeModal === "home" && <ASHomeModal onClose={closeModal} />}
+          {activeModal === "nosotras" && <ASNosotrasModal onClose={closeModal} />}
+          {activeModal === "contacto" && <ASContactoModal onClose={closeModal} />}
+          {activeModal === "foro" && <ASForoModal onClose={closeModal} />}
+          {activeModal === "clases" && <ASClasesModal onClose={closeModal} />}
+          {activeModal === "carrito" && <ASCarritoModal onClose={closeModal} />}
+          {activeModal === "perfil" && <ASPerfilModal onClose={closeModal} />}
+          {activeModal === "registro" && <ASRegistroModal onClose={closeModal} />}
+          {activeModal === "login" && <ASLoginModal onClose={closeModal} />}
+        </section>
+
+        {/* === TECHNICAL ASPECTS === */}
+        <section className="animate-fadeIn">
+          <h2 className="as-heading">
+            {t("technical_title")}
+          </h2>
+          <ul className="pretty-bullets list-disc list-inside space-y-2 text-[var(--text-muted)] text-justify">
             {[
               "tech_json",
               "tech_emails",
@@ -79,26 +176,27 @@ export default function AprendeShopDetail() {
               "tech_back",
               "tech_deploy_git",
               "tech_deploy_aws",
-            ].map((item) => (
-              <li key={item}>{t(item)}</li>
+            ].map((key) => (
+              <li key={key}>{t(key)}</li>
             ))}
           </ul>
         </section>
 
-        {/* === VISUAL SECTION === */}
-        <section>
-          <h2 className="text-2xl font-bold mb-4">{t("visual_title")}</h2>
-          <p className="mb-6 text-[var(--text-muted)]">{t("visual_text")}</p>
-          <img
-            src="pendiente"
-            alt="Mockup AprendeShop"
-            className="rounded-2xl shadow-md w-full border border-[var(--border)]"
-          />
+        {/* === PROBLEM SOLVING === */}
+        <section className="animate-scaleIn">
+          <h2 className="as-heading">
+            {t("problem_solving_title")}
+          </h2>
+          <p className="leading-relaxed text-[var(--text-muted)] text-justify">
+            {t("problem_solving_text")}
+          </p>
         </section>
 
         {/* === LINKS === */}
-        <section className="text-center mt-16 space-y-4">
-          <h2 className="text-2xl font-bold mb-4">{t("explore_title")}</h2>
+        <section className="text-center mt-16 space-y-4 animate-fadeIn">
+          <h2 className="as-heading">
+            {t("explore_title") || "Explore More"}
+          </h2>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="https://rubiportuguez.github.io/Aprende-Shop/index.html"
@@ -106,7 +204,7 @@ export default function AprendeShopDetail() {
               rel="noreferrer"
               className="btn btn-accent3 flex items-center gap-2"
             >
-              <ExternalLink size={18} /> {t("demo_btn")}
+              <ExternalLink size={18} /> {t("demo_btn") || "Live Demo"}
             </a>
             <a
               href="https://www.figma.com/design/MG8TBK9lzvWV1aU8pJSIPd/Borradores-AprendeShop"
@@ -122,7 +220,7 @@ export default function AprendeShopDetail() {
               rel="noreferrer"
               className="btn btn-accent3 flex items-center gap-2"
             >
-              <Github size={18} /> {t("repo_btn")}
+              <Github size={18} /> {t("repo_btn") || "Repository"}
             </a>
           </div>
         </section>

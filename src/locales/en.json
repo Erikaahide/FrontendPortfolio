@@ -96,35 +96,58 @@
     "contact_email": "Email",
     "footer_rights": "All rights reserved.",
 
-        "aprendeshop_detail_subtitle": "UX Case Study · Educational e-commerce built with Java, Spring Boot and Bootstrap.",
+
+        "aprendeshop_detail_subtitle": "Full stack web · Educational e-commerce built with Java, Spring Boot and Bootstrap.",
         "back_to_portfolio": "Back to portfolio",
-        "project_overview_title": "Project Overview",
-        "project_overview_text": "AprendeShop is an e-commerce platform connecting course creators with users interested in creative entrepreneurship. Developed collaboratively during Generation Mexico’s Full Stack Bootcamp, applying agile methodologies, visual design, full stack development and product validation.",
-        "ux_process_title": "UX Process",
-        "ux_understand_title": "Understand",
-        "ux_understand_desc": "User interviews, benchmarking and defining pain points.",
-        "ux_ideate_title": "Ideate",
-        "ux_ideate_desc": "Brainstorming, user flows and low-fidelity wireframes.",
-        "ux_design_title": "Design",
-        "ux_design_desc": "Visual design and interactive prototype in Figma.",
-        "ux_develop_title": "Develop",
-        "ux_develop_desc": "Implementation in Java, Spring Boot and front-end with HTML/CSS/JS.",
-        "ux_validate_title": "Validate",
-        "ux_validate_desc": "Usability testing and improvements after feedback.",
-        "my_role_title": "My role",
-        "my_role_text": "Full stack focused on UX/UI and Frontend Development. I worked on information architecture, visual design, component creation and layout structure.",
-        "duration_title": "Duration",
-        "duration_text": "12 weeks (July — September 2025)",
-        "technical_title": "Technical aspects",
-        "tech_json": "Dynamic data handling with JSON for rendering courses and categories.",
-        "tech_emails": "Automatic email delivery on user registration.",
-        "tech_front": "Frontend built with HTML, CSS, and Vanilla JavaScript using Bootstrap.",
-        "tech_back": "Backend implemented in Java with Spring Boot and MySQL.",
-        "tech_deploy_git": "Deployed via GitHub Pages with version control in Git.",
-        "tech_deploy_aws": "Deployed on AWS.",
-        "visual_title": "Visual Design",
-        "visual_text": "The visual system combines green and burgundy contrast to convey professionalism and clarity, with a flexible layout focused on accessibility and visual hierarchy.",
-        "explore_title": "Explore the project",
+
+        "project_overview_text": "AprendeShop is a full-stack academic project (It’s not a real client case, but it’s designed as if it were). An educational e-commerce platform developed by a multidisciplinary team under the Agile Scrum methodology. The goal was to design and build a functional MVP, it simulates a real client scenario with user authentication, explore courses, manage wishlists, and participate in a community forum, applying user-centered design. We worked in weekly sprints including planning, reviews, and retrospectives.",
+
+  "technologies_title": "Technologies Used",
+  "technologies_list": "Frontend: HTML, CSS and JavaScript using Bootstrap 5.3.7. Backend: Java, Spring Boot and MySQL. Additional tools: Figma (UX/UI design), Trello, GitHub (version control), AWS (deployment) and JSON (dynamic data handling)",
+
+  "features_title": "Key Features",
+  "features_list": "User registration and role-based authentication. Wishlist for courses and products. Discussion forum for community interaction. Dynamic rendering of courses and categories via JSON. Deployed using GitHub Pages and AWS.",
+
+  "based_on_title": "Based On",
+  "based_on_text": "This project was developed as part of Generation Mexico’s Full-Stack Java Bootcamp, combining educational accessibility with e-commerce functionality in a real collaborative environment. Each sprint focused on delivering usable increments — from database modeling to interface validation — ensuring design and development decisions aligned with user needs and business goals.",
+
+ "ux_process_title": "UX / Design Sprint Process",
+
+"ux_empathize_title": "Empathize",
+"ux_empathize_desc": " Study the market, analyze competitors, understand business and client needs to define goals and parameters.",
+
+"ux_define_title": "Define",
+"ux_define_desc": "Clarify the main problem — Optional access to the materials along each course and ensuring user guidance through the community forum.",
+
+"ux_ideate_title": "Ideate",
+"ux_ideate_desc": "Collaborative teamwork - brainstorming, empathy reviews, and decision-making to generate user-centered ideas.",
+
+"ux_prototype_title": "Prototype",
+"ux_prototype_desc": "Build a high-fidelity prototype in Figma that visualizes the user experience and interaction flow.",
+
+"ux_test_title": "Test",
+"ux_test_desc": "Validate with usability testing and technical implementation checks using Postman and MySQL, iterating based on feedback.",
+
+
+  "my_role_title": "My Role",
+  "my_role_text": "Full-Stack Developer, my main focus was UX/UI design, frontend structure, and maintaining visual consistency in the design system to ensure an intuitive, aesthetic, and responsive user experience. Collaborating closely with backend integration and using Git branches and Pull Requests for team coordination.",
+
+  "duration_title": "Duration",
+  "duration_text": "9 weeks (July — September 2025)",
+
+  "technical_title": "Technical Aspects",
+  "tech_json": "Dynamic data handling with JSON for rendering courses and categories.",
+  "tech_emails": "Automatic email sent to the team from the Contact form.",
+  "tech_front": "Frontend built with HTML, CSS, and JavaScript using Bootstrap 5.3.7.",
+  "tech_back": "Backend implemented in Java 21 with Spring Boot Gradle, JPA/Hibernate and connection with MySQL database.",
+  "tech_test": "Implemented postman with methods GET, POST, PUT and DELETE also Junit5",
+  "tech_deploy_git": "Deployed via GitHub Pages with version control in Git.",
+  "tech_deploy_aws": "Deployed on AWS using MariaDB.",
+
+  "problem_solving_title": "Problem solving and learnings",
+  "problem_solving_text": "Integrated a cohesive design system across front and back. Structured reusable dynamic rendering logic using JSON. Improved productivity by applying Scrum ceremonies and Trello task management. Balanced visual design with technical scalability, ensuring maintainability and cross-browser compatibility.",
+
+  "explore_title": "Explore project",
         "demo_btn": "Demo",
         "repo_btn": "Repository"
-      }
+}

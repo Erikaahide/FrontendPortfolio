@@ -1,12 +1,12 @@
-/* Design tokens: colores, tipografías, radios, sombras, espaciado */
+/* Design Tokens: colores, tipografía, radios, sombras, espaciado */
 :root {
-  /* Colores semánticos modo claro */
+  /* === Base (modo claro) === */
   --bg: #f8f9fb;
   --surface: #ffffff;
   --text: #151718;
   --muted: #70757e;
 
-  /* Primary / accent */
+  /* === Accents globales === */
   --primary: #f8246e;
   --accent: #a694d7;
   --accent2: rgb(141, 205, 58);
@@ -18,23 +18,31 @@
   --accentO: rgb(107, 77, 102);
   --accentB: rgb(25, 75, 160);
 
-  /* Borde / focus ring */
+  /* === Accents temáticos (modales, secciones) === */
+  --accent-aboutme-from: 330 85% 60%;
+  --accent-aboutme-to: 300 75% 40%;
+  --accent-fit-from: 80 60% 60%;
+  --accent-fit-to: 80 80% 35%;
+  --accent-aprende-from: 170 90% 30%;
+  --accent-aprende-to: 170 50% 18%;
+  --accent-improve-from: 210 65% 45%;
+  --accent-improve-to: 210 45% 25%;
+
+  /* === Bordes y sombras === */
   --border: #e6e8eb;
   --ring: #9680ce;
+  --radius: 1rem;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .06);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, .08);
 
-  /* Tipografía */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  /* === Tipografía === */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
   --font-size-sm: 0.9rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: clamp(2rem, 6vw, 4rem);
 
-  /* Radius y sombras */
-  --radius: 1rem;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .06);
-  --shadow-md: 0 6px 24px rgba(0, 0, 0, .08);
-
-  /* Espaciado (8px scale) */
+  /* === Espaciado === */
   --space-1: .25rem;
   --space-2: .5rem;
   --space-3: .75rem;
@@ -44,7 +52,7 @@
   --space-12: 3rem;
 }
 
-/* Modo oscuro: mismo H/S, ajusta luminancia */
+/* 🌙 Dark mode */
 :root[data-theme="dark"] {
   --bg: #0f1113;
   --surface: #171a1d;
@@ -53,9 +61,18 @@
   --primary: #ff2ea6;
   --accent: #9645d5;
   --accent5: rgb(228, 209, 3);
-
   --border: #24282c;
   --ring: #4553ff;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .35);
   --shadow-md: 0 10px 28px rgba(0, 0, 0, .45);
+
+  /* tonos más intensos en oscuro */
+  --accent-aboutme-from: 330 70% 70%;
+  --accent-aboutme-to: 300 60% 40%;
+  --accent-fit-from: 80 60% 55%;
+  --accent-fit-to: 80 50% 20%;
+  --accent-aprende-from: 170 80% 40%;
+  --accent-aprende-to: 170 50% 22%;
+  --accent-improve-from: 210 70% 60%;
+  --accent-improve-to: 210 60% 35%;
 }
