@@ -32,7 +32,7 @@ export default function App() {
   const [activeModal, setActiveModal] = useState(null);
 
   return (
-    <Router basename="/FrontendPortfolio">
+    <Router basename={import.meta.env.BASE_URL}>
       <Navbar />
 
       <Routes>
