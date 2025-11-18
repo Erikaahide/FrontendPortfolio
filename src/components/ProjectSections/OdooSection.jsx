@@ -9,8 +9,8 @@ export default function OdooSection() {
   return (
     <Section id="mapping" title="Mapping">
       <div className="stack">
-        <h3 className="text-xl font-bold mb-2">{t("mapping_title")}</h3>
-        <p className="mb-4">{t("mapping_description")}</p>
+        <h3 className="text-xl font-bold mb-2">{t("odoo_title")}</h3>
+        <p className="mb-4">{t("odoo_description")}</p>
 
         <ul className="list-disc list-inside space-y-1 mb-4">
           <li>{t("mapping_task_1")}</li>

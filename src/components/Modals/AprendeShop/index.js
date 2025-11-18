@@ -1,0 +1,9 @@
+export { default as ASHomeModal } from "./ASHomeModal";
+export { default as ASNosotrasModal } from "./ASNosotrasModal";
+export { default as ASContactoModal } from "./ASContactoModal";
+export { default as ASPerfilModal } from "./ASPerfilModal";
+export { default as ASRegistroModal } from "./ASRegistroModal";
+export { default as ASLoginModal } from "./ASLoginModal";
+export { default as ASForoModal } from "./ASForoModal";
+export { default as ASClasesModal } from "./ASClasesModal";
+export { default as ASCarritoModal } from "./ASCarritoModal";
