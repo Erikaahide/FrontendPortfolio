@@ -3,7 +3,7 @@ import Section from "../Section";
 import { useTranslation } from "react-i18next";
 import { Figma} from "lucide-react";
 
-export default function OdooSection() {
+export default function MappingSection() {
   const { t } = useTranslation();
 
   return (

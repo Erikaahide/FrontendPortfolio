@@ -1,13 +1,19 @@
+@import "./styles/tokens.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import "./styles/tokens.css";
-
 *,
 *::before,
 *::after { box-sizing: border-box; }
-html, body, #root { height: 100%; }
+html, body {
+  min-height: 100%;
+  height: auto;
+}
+#root {
+  min-height: 100%;
+}
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -148,6 +154,11 @@ padding: 0 var(--space-4); }
 
 .btn-accentB {
   background: var(--accentB);
+  border-color: transparent;
+  color: white;
+}
+.btn-accentM {
+  background: var(--accentM);
   border-color: transparent;
   color: white;
 }
