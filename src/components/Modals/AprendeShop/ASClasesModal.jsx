@@ -15,7 +15,7 @@ export default function ASClasesModal({ onClose }) {
 
         {/* Título */}
         <h2 className="text-3xl font-bold text-[var(--accent-improve-from)] mb-4 text-center">
-          Classes Page
+          Classes
         </h2>
 
         {/* Descripción breve */}

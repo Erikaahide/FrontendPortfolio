@@ -42,11 +42,7 @@ export default function ASContactModal({ onClose }) {
           </li>
           <li>
             <strong>Map Section:</strong> Embedded Google Maps iframe showing
-            the AprendeShop office at Coworking Condesa Openhub, CDMX.
-          </li>
-          <li>
-            <strong>Footer Note:</strong> Location description and contact
-            information to promote transparency and approachability.
+            the AprendeShop office.
           </li>
         </ul>
 

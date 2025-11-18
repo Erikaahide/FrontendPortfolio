@@ -9,7 +9,7 @@ export default function OdooSection() {
   return (
     <Section id="odoo" title="Odoo">
       <div className="stack">
-        <h3 className="text-xl font-bold mb-2">Odoo design exercise</h3>
+        <h3 className="text-xl font-bold mb-2">{t("odoo_title")}</h3>
         <p className="mb-4">{t("odoo_description")}</p>
 
         <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>

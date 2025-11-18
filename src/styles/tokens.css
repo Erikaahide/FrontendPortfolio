@@ -14,9 +14,10 @@
   --accent4: rgb(133, 146, 244);
   --accent5: rgb(238, 224, 28);
   --accent6: rgb(60, 93, 192);
-  --accent7: rgb(220, 125, 142);
+  --accent7: rgb(255, 176, 107);
   --accentO: rgb(107, 77, 102);
   --accentB: rgb(25, 75, 160);
+  --accentM: rgb(188, 58, 151);
 
   /* === Accents temáticos (modales, secciones) === */
   --accent-aboutme-from: 330 85% 60%;
@@ -59,8 +60,11 @@
   --text: #eef1f3;
   --muted: #a1a7af;
   --primary: #ff2ea6;
-  --accent: #9645d5;
+  --accent: #5d1097;
+  --accent4: rgb(110, 126, 246);
   --accent5: rgb(228, 209, 3);
+  --accent7: rgb(246, 148, 62);
+  --accentM: rgb(110, 38, 108);
   --border: #24282c;
   --ring: #4553ff;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .35);

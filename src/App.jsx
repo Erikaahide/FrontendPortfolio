@@ -13,6 +13,7 @@ import AprendeShopSection from "./components/ProjectSections/AprendeShopSection"
 import BirdmanSection from "./components/ProjectSections/BirdmanSection";
 import FitAppSection from "./components/ProjectSections/FitAppSection";
 import OdooSection from "./components/ProjectSections/OdooSection";
+import MappingSection from "./components/ProjectSections/MappingSection";
 import FigmaSection from "./components/ProjectSections/FigmaSection";
 import JSDemoSection from "./components/ProjectSections/JSDemoSection";
 import SQLSection from "./components/ProjectSections/SQLSection";
@@ -47,6 +48,7 @@ export default function App() {
               <BirdmanSection setActiveModal={setActiveModal} />
               <FitAppSection setActiveModal={setActiveModal} />
               <OdooSection />
+              <MappingSection/>
               <FigmaSection />
               <JSDemoSection />
               <SQLSection />
