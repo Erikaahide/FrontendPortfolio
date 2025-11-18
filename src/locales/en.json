@@ -79,7 +79,7 @@
   "modal_birdman_story_2": "As a visitor, I want the color palette and visuals to reflect each bird’s essence, strengthening brand recall.",
   "modal_birdman_story_3": "As a user with different devices, I need an accessible, responsive, and visually coherent interface.",
   "odoo_title": "Odoo Design Excersice",
-  "odoo_description": "Web mockup built with Bootstrap, SCSS, and a focus on desktop viewports (≥992px). It was created as part of a technical interview assessment to demonstrate skills in modern layout development, SCSS variable management, and project organization best practices and using figma AI.",
+  "odoo_description": "Web mockup built with Bootstrap, SCSS, and a focus on desktop viewports (≥992px). It was created as part of a technical interview assessment to demonstrate skills in modern layout development, SCSS variable management, project organization best practices and using figma AI.",
   "mapping_title": "Mapping the Shopping Experience",
   "mapping_description": "This case study documents the mapping process behind the redesign of a minimal, modern e-commerce experience. Using Figma, the core elements of the user journey to identify friction points, clarify decision paths, and improve the flow from browsing to checkout.",
   "mapping_task_1": "User Persona",
