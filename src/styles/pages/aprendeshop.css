@@ -1,0 +1,220 @@
+.aprendeshop-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--text);
+    animation: fadeIn 0.4s ease-out;
+  }
+  
+  /* Hero */
+  .as-hero {
+    position: relative;
+    background: linear-gradient(
+      to right,
+      hsl(var(--accent-aprende-from) / 0.9),
+      hsl(var(--accent-aprende-to) / 0.9)
+    );
+    color: white;
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+  
+  .as-hero-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+  .as-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  
+  .as-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  /* Back link */
+  .as-backlink {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+  }
+  .as-backlink:hover { opacity: 1; }
+  
+  /* Body */
+  .as-body {
+    flex-grow: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .as-section {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  /* Headings & text */
+  .as-heading {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: hsl(var(--accent-aprende-from));
+    margin-bottom: 1.5rem;
+  }
+  
+  .as-text-muted {
+    color: var(--muted);
+  }
+
+  /* === PRETTY BULLETS === */
+ul.pretty-bullets {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 0.8rem;
+  }
+  
+  ul.pretty-bullets li {
+    position: relative;
+    padding-left: 2rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0.75rem;
+    border-left: 4px solid hsl(var(--accent-aprende-from));
+    padding: 0.75rem 1rem 0.75rem 2rem;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    text-align: justify;
+  }
+  ul.pretty-bullets li:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(4px);
+  }
+  
+  /* === UX Process Grid === */
+.as-ux-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    text-align: center;
+  }
+  
+  .as-ux-step {
+    background: var(--surface);
+    border: 1px solid hsl(var(--accent-aprende-from) / 0.25);
+    border-radius: var(--radius);
+    padding: 1.25rem 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+  }
+  
+  .as-ux-step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: hsl(var(--accent-aprende-from) / 0.4);
+  }
+  
+  .as-ux-index {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--accent-aprende-from)),
+      hsl(var(--accent-aprende-to))
+    );
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 auto 0.75rem;
+    box-shadow: 0 0 8px hsl(var(--accent-aprende-from) / 0.4);
+  }
+  
+  /* Optional: Title and text inside each step */
+  .as-ux-step h3 {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+  
+  .as-ux-step p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  
+/* === UX / Design Sprint Process (fix visible + circles restore) === */
+.as-ux-step {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid hsl(var(--accent-aprende-from) / 0.25);
+    border-radius: var(--radius);
+    padding: 1.5rem 1rem 1.25rem;
+    text-align: center;
+    color: var(--text);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+  }
+  
+  .as-ux-step:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: hsl(var(--accent-aprende-from) / 0.4);
+  }
+  
+  /* Re-crear la bolita numérica */
+  .as-ux-step > div:first-child {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--accent-aprende-from)),
+      hsl(var(--accent-aprende-to))
+    );
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 auto 0.75rem;
+    box-shadow: 0 0 6px hsl(var(--accent-aprende-from) / 0.35);
+  }
+  
+  /* Títulos y textos */
+  .as-ux-step h3 {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+  .as-ux-step p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  
+  /* Light mode fix */
+  @media (prefers-color-scheme: light) {
+    .as-ux-step {
+      background: hsl(0 0% 99%);
+      border-color: hsl(var(--accent-aprende-from) / 0.2);
+    }
+    .as-ux-step > div:first-child {
+      box-shadow: 0 0 8px hsl(var(--accent-aprende-from) / 0.4);
+    }
+  }
+  
+  
