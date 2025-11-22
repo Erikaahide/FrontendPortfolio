@@ -40,7 +40,7 @@ export default function GoogleSection() {
             target="_blank"
             rel="noreferrer"
           >
-            <Figma size={18} /> Figma
+            <Figma size={18} /> Figma Portfolio
           </a>
         </div>
       </div>
