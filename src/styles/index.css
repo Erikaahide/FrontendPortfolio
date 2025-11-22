@@ -108,6 +108,7 @@ small, .muted { color: var(--muted); font-size: var(--font-size-sm); }
 .btn-accentO { background: var(--accentO); border-color: transparent; color: white; }
 .btn-accentB { background: var(--accentB); border-color: transparent; color: white; }
 .btn-accentM { background: var(--accentM); border-color: transparent; color: white; }
+.btn-accentG { background: var(--accentG); border-color: transparent; color: white; }
 
 /* === LAYOUT HELPERS === */
 .container {

@@ -15,6 +15,7 @@ export default function HeroHome() {
           <a href="#improve" className="btn btn-accentB">Improvements</a>
           <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
           <a href="#odoo" className="btn btn-accentO">Excersice</a>
+          <a href="#google" className="btn btn-accentG">Google</a>
           <a href="#mapping" className="btn btn-accentM">Mapping</a>
           <a href="#figma" className="btn btn-accent7">Figma</a>
           <a href="#JS" className="btn btn-accent5">JSDemo</a>

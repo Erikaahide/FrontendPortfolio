@@ -20,14 +20,6 @@ export default function FigmaSection() {
           >
             {t("portfolio_btn")}
           </a>
-          <a
-            className="btn btn-accent7"
-            href="https://www.figma.com/design/ZPpJGbMZmsWddn3i0icvXt/Portfolio?node-id=0-1&t=BCGzJieD65UEbvnu-0"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Wireframe
-          </a>
         </div>
       </div>
     </Section>

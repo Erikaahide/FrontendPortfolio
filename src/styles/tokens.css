@@ -7,7 +7,6 @@
   --muted: #70757e;
 
   /* === Accents globales === */
-  /* === Accents globales === */
   --primary: #f8246e;
   --accent: #a694d7;
   --accent2: rgb(141, 205, 58);
@@ -19,7 +18,8 @@
   --accent7: rgb(255, 176, 107);
   --accentO: rgb(107, 77, 102);
   --accentB: rgb(25, 75, 160);
-  --accentM: rgb(188, 58, 151);
+  --accentM: rgb(240, 155, 185);
+  --accentG: rgb(188, 58, 151);
 
   /* === Accents temáticos (modales, secciones) === */
   --accent-aboutme-from: 330 85% 60%;
@@ -30,9 +30,6 @@
   --accent-aprende-to: 170 50% 18%;
   --accent-improve-from: 210 65% 45%;
   --accent-improve-to: 210 45% 25%;
-
-  /* === Bordes y sombras === */
-  --accentM: rgb(188, 58, 151);
 
   
   /* Borde / focus ring */
@@ -60,7 +57,6 @@
 }
 
 /* 🌙 Dark mode */
-/* 🌙 Dark mode */
 :root[data-theme="dark"] {
   --bg: #0f1113;
   --surface: #171a1d;
@@ -69,13 +65,10 @@
   --primary: #ff2ea6;
   --accent: #5d1097;
   --accent4: rgb(110, 126, 246);
-  --accent: #5d1097;
-  --accent4: rgb(110, 126, 246);
   --accent5: rgb(228, 209, 3);
   --accent7: rgb(246, 148, 62);
-  --accentM: rgb(110, 38, 108);
-  --accent7: rgb(246, 148, 62);
-  --accentM: rgb(110, 38, 108);
+  --accentM: rgb(166, 16, 119);
+  --accentG: rgb(110, 38, 108);
   --border: #24282c;
   --ring: #4553ff;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .35);

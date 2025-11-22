@@ -25,7 +25,7 @@ export default function ExtraEducationModal({ onClose }) {
               {t("modal_extra_education_tech")}
             </h5>
             <ul className="list-disc list-inside text-sm text-[var(--surface-muted)] space-y-1">
-              <li>Google - Foundations of User Experience (UX) Design</li>
+              <li>Google - UX Design Professional Certificate</li>
               <li>Skill share - Figma Pro: Auto Layouts, Grids & Components</li>
               <li>Fundaula - Java</li>
               <li>Desafío Latam - CSS, Figma, Git, Web development</li>
@@ -42,7 +42,7 @@ export default function ExtraEducationModal({ onClose }) {
               <li>Berlitz – English Communication for Professionals</li>
               <li>EF SET Certification (C1)</li>
               <li>Domestika - Adobe Creative Suite</li>
-              <li>INSIDE LVMH - Fashion Design, Innovation & Customer experience</li>
+              <li>INSIDE LVMH - Creation, Branding, Design, Innovation, Reatil & Customer experience</li>
             </ul>
           </div>
         </div>
