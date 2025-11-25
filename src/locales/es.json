@@ -57,7 +57,7 @@
     "modal_fit_future_1": "Integración con dispositivos wearables como Apple Watch o Whoop para seguimiento en tiempo real.",
     "modal_fit_future_2": "Gráficas semanales de progreso en calorías, macros y evolución del peso.",
     "modal_fit_future_3": "Notificaciones personalizadas y recordatorios para hidratación, entrenamiento y horarios de comida.",
-    "aprendeshop_subtitle": "E-commerce full-stack (proyecto en equipo)",
+    "aprendeshop_subtitle": "E-commerce full-stack (proyecto en equipo 9 semanas)",
     "aprendeshop_description": "AprendeShop es una aplicación web full-stack desarrollada durante el bootcamp de Generation Java Full-Stack.",
     "aprendeshop_tasks_title": "Como parte del equipo, colaboré en:",
     "aprendeshop_task_1": "Desarrollo de componentes UI responsivos con HTML, CSS, JavaScript y Bootstrap",
@@ -85,6 +85,7 @@
   "google_courses": [
     "Foundations of User Experience (UX) Design",
     "Start the UX Process: Empathize, Define, Ideate",
+    "Empathize, Define, Ideate: User, Empathy map, Persona, User Journey, Statements, Flows, Storyboard, Sitemaps, IA..",
     "Build Wireframes and Low-Fidelity Prototypes",
     "Conduct UX Research and Test Early Concepts",
     "Create High-Fidelity Designs and Prototypes in Figma",

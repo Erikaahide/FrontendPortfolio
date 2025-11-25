@@ -26,7 +26,7 @@ export default function GoogleSection() {
               key={idx}
               className="w-3 h-3 rounded-full"
               style={{
-                backgroundColor: idx < 3 ? "var(--accentG)" : "var(--border)",
+                backgroundColor: idx < 5 ? "var(--accentG)" : "var(--border)",
               }}
             ></div>
           ))}

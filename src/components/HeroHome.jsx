@@ -13,11 +13,11 @@ export default function HeroHome() {
           <a href="#about" className="btn btn-primary">{t("about_title")}</a>
           <a href="#aprendeShop" className="btn btn-accent3">AprendeShop</a>
           <a href="#improve" className="btn btn-accentB">Improvements</a>
-          <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
           <a href="#odoo" className="btn btn-accentO">Excersice</a>
           <a href="#google" className="btn btn-accentG">Google</a>
           <a href="#mapping" className="btn btn-accentM">Mapping</a>
           <a href="#figma" className="btn btn-accent7">Figma</a>
+          <a href="#fitapp" className="btn btn-accent2">FitAppDemo</a>
           <a href="#JS" className="btn btn-accent5">JSDemo</a>
           <a href="#SQL" className="btn btn-accent6">SQLDemo</a>
           <a href="#adobe" className="btn btn-accent4">AdobeSuite</a>
