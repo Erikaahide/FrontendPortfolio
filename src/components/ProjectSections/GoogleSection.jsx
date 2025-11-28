@@ -20,7 +20,7 @@ export default function GoogleSection() {
         </ul>
 
         {/* Dot progress */}
-        <div className="flex items-center gap-1 mt-4">
+        {/* <div className="flex items-center gap-1 mt-4">
           {Array.from({ length: 7 }).map((_, idx) => (
             <div
               key={idx}
@@ -30,7 +30,7 @@ export default function GoogleSection() {
               }}
             ></div>
           ))}
-        </div>
+        </div> */}
 
 
         <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
@@ -41,6 +41,20 @@ export default function GoogleSection() {
             rel="noreferrer"
           >
             <Figma size={18} /> Figma Portfolio
+          </a>
+          <a
+            className="btn btn-accentG"
+            href="https://drive.google.com/file/d/1z7emZRneGiq1oT96hzh5eVEBIEE0mDU8/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          > UX Research
+          </a>
+          <a
+            className="btn btn-accentG"
+            href="https://drive.google.com/file/d/1Xz6ZVRsDFwGJZWTde11kfE5WiyJT1Axa/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          > Certificate
           </a>
         </div>
       </div>
