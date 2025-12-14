@@ -15,6 +15,7 @@ import FitAppSection from "./components/ProjectSections/FitAppSection";
 import OdooSection from "./components/ProjectSections/OdooSection";
 import MappingSection from "./components/ProjectSections/MappingSection";
 import GoogleSection from "./components/ProjectSections/GoogleSection";
+import AISection from "./components/ProjectSections/AISection";
 import FigmaSection from "./components/ProjectSections/FigmaSection";
 import JSDemoSection from "./components/ProjectSections/JSDemoSection";
 import SQLSection from "./components/ProjectSections/SQLSection";
@@ -50,6 +51,7 @@ export default function App() {
               <OdooSection />
               <GoogleSection/>
               <MappingSection/>
+              <AISection/>
               <FigmaSection />
               <FitAppSection setActiveModal={setActiveModal} />
               <JSDemoSection />

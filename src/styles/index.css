@@ -186,3 +186,9 @@ small, .muted { color: var(--muted); font-size: var(--font-size-sm); }
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
+
+/* .chip {
+  @apply mt-3 px-4 py-1 rounded-full text-sm font-medium bg-white/20 backdrop-blur-md
+         border border-white/30 text-white hover:bg-white/30 transition;
+} */
+
