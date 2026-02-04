@@ -7,10 +7,10 @@ export default function HeroHome() {
   const buttons = [
     { id: "about", label: t("about_title"), href: "#about", className: "btn btn-primary", categories: ["info"] },
     { id: "aprendeShop", label: "AprendeShop", href: "#aprendeShop", className: "btn btn-accent3", categories: ["frontend", "backend", "uxui"] },
-    { id: "improve", label: "Improvements", href: "#improve", className: "btn btn-accentB", categories: ["uxui"] },
-    { id: "odoo", label: "Exercise", href: "#odoo", className: "btn btn-accentO", categories: ["uxui"] },
+    { id: "improve", label: t("impr_title"), href: "#improve", className: "btn btn-accentB", categories: ["uxui"] },
+    { id: "odoo", label: t("ej_title"), href: "#odoo", className: "btn btn-accentO", categories: ["uxui"] },
     { id: "google", label: "Google", href: "#google", className: "btn btn-accentG", categories: ["uxui"] },
-    { id: "mapping", label: "Mapping", href: "#mapping", className: "btn btn-accentM", categories: ["uxui"] },
+    { id: "mapping", label: t("map_title"), href: "#mapping", className: "btn btn-accentM", categories: ["uxui"] },
     { id: "ai", label: "Generative AI", href: "#ai", className: "btn btn-accentAI", categories: ["uxui"] },
     { id: "figma", label: "Figma", href: "#figma", className: "btn btn-accent7", categories: ["uxui"] },
     { id: "fitapp", label: "FitAppDemo", href: "#fitapp", className: "btn btn-accent2", categories: ["frontend", "uxui"] },

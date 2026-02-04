@@ -9,7 +9,7 @@ export default function BirdmanSection({ setActiveModal }) {
   return (
     <Section id="improve" title="Improvements">
       <div className="stack">
-        <h3 className="text-xl font-bold mb-2">Birdman Web Improvements</h3>
+        <h3 className="text-xl font-bold mb-2">{t("birdman_imp")}</h3>
         <p className="mb-4">{t("improve_description")}</p>
         <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
           <a

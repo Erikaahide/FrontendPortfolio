@@ -16,7 +16,6 @@ export default function FitFutureModal({ onClose }) {
         <ul className="list-disc list-inside space-y-2 text-sm text-[var(--surface-muted)]">
           <li>{t("modal_fit_future_1")}</li>
           <li>{t("modal_fit_future_2")}</li>
-          <li>{t("modal_fit_future_3")}</li>
         </ul>
       </div>
     </div>

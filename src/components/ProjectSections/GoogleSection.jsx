@@ -13,7 +13,7 @@ export default function GoogleSection() {
         <h3 className="text-xl font-bold mb-2">{t("google_description")}</h3>
         <p className="mb-4">{t("google_text")}</p>
 
-        <ul className="list-disc list-inside mb-4 text-sm space-y-1">
+        <ul className="list-disc list-inside space-y-1 mb-4">
           {courses.map((course, idx) => (
             <li key={idx}>{course}</li>
           ))}

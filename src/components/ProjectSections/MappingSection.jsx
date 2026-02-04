@@ -16,7 +16,6 @@ export default function MappingSection() {
           <li>{t("mapping_task_1")}</li>
           <li>{t("mapping_task_2")}</li>
           <li>{t("mapping_task_3")}</li>
-          <li>{t("mapping_task_4")}</li>
           <li>{t("mapping_task_5")}</li>
         </ul>
 
