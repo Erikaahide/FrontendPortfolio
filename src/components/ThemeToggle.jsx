@@ -34,7 +34,7 @@ export default function ThemeToggle({ className = "" }) {
       onClick={toggle}
       aria-label="Toggle theme"
     >
-      <span aria-hidden>{theme === "dark" ? "☀️" : "🌙"}</span>
+      <span aria-hidden>{theme === "dark" ? "🌙" : "☀️"}</span>
       <span className="sr-only">Change theme</span>
     </button>
   );

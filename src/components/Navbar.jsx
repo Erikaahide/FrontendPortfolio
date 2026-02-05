@@ -30,7 +30,7 @@ export default function Navbar() {
             onClick={toggleLang}
             aria-label="Toggle language"
           >
-            {i18n.language === "en" ? "🇲🇽" : "🇺🇸"}
+            {i18n.language === "en" ? "🇺🇸" : "🇲🇽"}
           </button>
         </div>
       </div>
