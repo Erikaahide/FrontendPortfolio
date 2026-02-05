@@ -11,6 +11,7 @@
 html, body {
   min-height: 100%;
   height: auto;
+  scroll-behavior: smooth;
 }
 #root {
   min-height: 100%;

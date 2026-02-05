@@ -7,7 +7,7 @@ export default function MappingSection() {
   const { t } = useTranslation();
 
   return (
-    <Section id="mapping" title="Mapping">
+    <Section id="mapping" title={t("map_title")}>
       <div className="stack">
         <h3 className="text-xl font-bold mb-2">{t("mapping_title")}</h3>
         <p className="mb-4">{t("mapping_description")}</p>

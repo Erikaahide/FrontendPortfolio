@@ -7,7 +7,7 @@ export default function BirdmanSection({ setActiveModal }) {
   const { t } = useTranslation();
 
   return (
-    <Section id="improve" title="Improvements">
+    <Section id="improve" title={t("impr_title")}>
       <div className="stack">
         <h3 className="text-xl font-bold mb-2">{t("birdman_imp")}</h3>
         <p className="mb-4">{t("improve_description")}</p>
